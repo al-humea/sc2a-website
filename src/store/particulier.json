@@ -1,0 +1,36 @@
+[{
+	"num": 1,
+	"text": "Vous êtes propriétaire/locataire d'une maison ou d'un appartement ? Nous trouverons l'assurance idéale pour votre résidence.",
+	"heading": "Assurance Habitation",
+	"image": {
+		"path": "/particulier/habitation.jpg",
+		"alt": "habitation photo"
+	}
+},
+{
+	"num": 2,
+	"text": "texte complémentaire santé",
+	"heading": "Complémentaire santé",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt": "santé photo"
+	}
+},
+{
+	"num": 3,
+	"text": "texte protection juridique",
+	"heading": "Protection juridique",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt":"projuri photo"
+	}
+},
+{
+	"num": 4,
+	"text": "texte prévoyance",
+	"heading": "Prévoyance",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt":"prevoy photo"
+	}
+}]
