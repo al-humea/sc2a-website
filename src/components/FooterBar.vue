@@ -6,30 +6,42 @@
 
 <template>
 	<footer>
-		<router-link to="/Accueil">@SC2A</router-link>
-		<router-link to="/MentionsLegales">MENTIONS LÉGALES</router-link>
-		<router-link to="/Accueil">
-			Nos agences
-		</router-link>
+		<nav>
+			<router-link to="/Accueil">@SC2A</router-link>
+			<router-link to="/MentionsLegales">MENTIONS LÉGALES</router-link>
+			<router-link to="/Accueil">
+				Nos agences
+			</router-link>
+		</nav>
 	</footer>
 </template>
 
 <style scoped>
-	a, a:visited, a:hover, a:link {
-		color: #FFF;
+	nav a,nav a:visited,nav a:link{
+		color: #fff;
 		text-decoration: none;
-		height: auto;
+	}
+	nav a:hover{
+		color : yellow;
+	}
+	nav {
+		grid-row: 1;
+		grid-column: 2;
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
 	}
 	footer {
 		min-height: 6vh;
-		width:100%;
+		width: 100vw;
 		background-color: #273188;
 		
-		display: flex;
-		justify-content: space-around;
-		align-content: center;
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: 1fr;
 		align-items: center;
-
+		justify-items: center;
 		color: #FFFF;
 	}
 </style>

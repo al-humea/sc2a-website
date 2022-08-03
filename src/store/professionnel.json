@@ -1,0 +1,72 @@
+[{
+	"num": 1,
+	"text": "Texte locaux professionnel.",
+	"heading": "Locaux professionnel",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt": "locaux pro photo"
+	}
+},
+{
+	"num": 2,
+	"text": "Texte auto/flotte auto.",
+	"heading": "Auto ou flotte auto",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt": "auto/flotte auto photo"
+	}
+},
+{
+	"num": 3,
+	"text": "Collectif frais de santé.",
+	"heading": "Collectif frais de santé",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt":"Collectif frais de santé photo"
+	}
+},
+{
+	"num": 4,
+	"text": "Texte protection juridique.",
+	"heading": "Protection juridique",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt":"protection juridique photo"
+	}
+},
+{
+	"num": 5,
+	"text": "Texte prévoyance individuelle ou collective.",
+	"heading": "Prévoyance individuelle ou collective",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt":"prévoyance entreprise photo"
+	}
+},
+{
+	"num": 6,
+	"text": "Texte épargne retraite",
+	"heading": "Épargne retraite ",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt":"épargne retraite photo"
+	}
+},
+{
+	"num": 7,
+	"text": "Texte assurance crédit",
+	"heading": "Assurance crédit",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt":"assurance crédit photo"
+	}
+},
+{
+	"num": 8,
+	"text": "Texte responsabilité civile",
+	"heading": "Responsabilité civile",
+	"image": {
+		"path": "/placeholder.jpg",
+		"alt":"responsabilité civile photo"
+	}
+}]
