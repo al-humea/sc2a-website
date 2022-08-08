@@ -1,72 +1,72 @@
 [{
 	"num": 1,
-	"text": "Texte locaux professionnel.",
+	"text": "Il est important pour l'entreprise de protéger ses locaux. L'assurance dommages aux biens couvre vos bâtiments (Incendie, Vol, Bris de glaces, dommages aux machines, aux marchandises...) mais également votre responsabilité (contre les tiers, les voisins, le propriétaire...) ainsi que les dommages immatériels suite à sinistre (frais de déblais, perte d'exploitation/perte de chiffre d'affaires, perte de loyers...).",
 	"heading": "Locaux professionnel",
 	"image": {
-		"path": "/placeholder.jpg",
+		"path": "/professionnel/locaux.jpg",
 		"alt": "locaux pro photo"
 	}
 },
 {
 	"num": 2,
-	"text": "Texte auto/flotte auto.",
+	"text": "Depuis 1958 la loi impose l'assurance pour tout véhicule terrestre à moteur. L'objectif de cette loi est de couvrir la responsabilité civile du conducteur pour les dommages causés aux tiers lors d'un accident. Bien sur et même si la loi ne l'oblige pas nous pouvons ajouter des garanties supplémentaires comme les dommages corporels du conducteur et les dommages subits par votre véhicule (incendie/Vol/Bris de Glace...). Pour les entreprises les contrats peuvent être des contrats individuels (1 seul véhicule assuré) ou des contrats Flotte Automobile (A partir de 5 véhicules). Les avantages pour l'entreprise de souscrire un contrat Flotte Automobile : Au niveau administratif il n'y a qu'un contrat à gérer, Au niveau financier la prime globale est inférieure, Au niveau des garanties chaque véhicule de la flotte peut être individualisé.",
 	"heading": "Auto ou flotte auto",
 	"image": {
-		"path": "/placeholder.jpg",
+		"path": "/professionnel/flotte.jpg",
 		"alt": "auto/flotte auto photo"
 	}
 },
 {
 	"num": 3,
-	"text": "Collectif frais de santé.",
+	"text": "Depuis 2016 la loi impose à toute entreprise ayant au minimum 1 salarié de soucrire un contrat complémentaire Frais de Santé. Ce contrat collectif frais de santé a pour objectif de rembourser tout ou partie des dépenses de santé engagées par les salariés de l'entreprise et en complément des prestations versées par l'assurance maladie. Les formules que nous proposons en tant que courtier sont établies en concertation avec l'entreprise et fonction de la démographie des salariés à assurer (selon l'âge de chacun, selon que l'on assure que le salarié ou lui et son conjoint ou lui son conjoint et ses enfants). Toutes les hypothèses seront étudiées avec vous pour vous apporter la solution correspondant le mieux à vos attentes.",
 	"heading": "Collectif frais de santé",
 	"image": {
-		"path": "/placeholder.jpg",
+		"path": "/professionnel/collsante.jpg",
 		"alt":"Collectif frais de santé photo"
 	}
 },
 {
 	"num": 4,
-	"text": "Texte protection juridique.",
+	"text": "Au quotidien les occasions de défendre vos droits sont multiples. Dans tous les domaines privé/professionnel vous pouvez avoir besoin de conseils juridiques, d'avis d'experts ou de la prise en charge des honoraires d'avocats/experts/huissiers pour la défense de vos intérêts.",
 	"heading": "Protection juridique",
 	"image": {
-		"path": "/placeholder.jpg",
+		"path": "/professionnel/juridique.jpg",
 		"alt":"protection juridique photo"
 	}
 },
 {
 	"num": 5,
-	"text": "Texte prévoyance individuelle ou collective.",
+	"text": "Parce qu'il est important de se prémunir contre les risques de l'existance la garantie de prévoyance vous couvre en complément des régimes obligatoires. En contrat collectif ou individuel nos garanties couvrent les risques majeurs tels que l'invalidité, l'incapacité ou encore le décès.",
 	"heading": "Prévoyance individuelle ou collective",
 	"image": {
-		"path": "/placeholder.jpg",
+		"path": "/professionnel/prevoyance.jpg",
 		"alt":"prévoyance entreprise photo"
 	}
 },
 {
 	"num": 6,
-	"text": "Texte épargne retraite",
+	"text": "Que ce soit l'article 83 (Surcomplémentaire retraite des salariés) ou en Madelin (Complément retraite et prévoyance des non salariés) il est primordial de préparer l'avenir. les objectifs sont nombreux notamment d'assurer un complément à votre retraite de base, de maintenir ses revenus en cas de perte d'activité ou d'invalidité, de verser un capital à ses proches en cas de décès.",
 	"heading": "Épargne retraite ",
 	"image": {
-		"path": "/placeholder.jpg",
+		"path": "/professionnel/retraite.jpg",
 		"alt":"épargne retraite photo"
 	}
 },
 {
 	"num": 7,
-	"text": "Texte assurance crédit",
+	"text": "Dès que vous empruntez de l'argent à organisme bancaire, il vous est impérativement demandé un contrat de garantie emprunteur. Si jusqu'en 2010 la banque se réservait la quasi totalité des assurances souscrites, la loi dite 'loi LAGARDE' a permis de choisir librement l'organisme de souscription d'une assurance emprunteur. Vous pouvez donc à la souscription d'un emprunt ou lors de chaque échéance anniversaire du contrat d'emprunt choisir librement votre assureur.",
 	"heading": "Assurance crédit",
 	"image": {
-		"path": "/placeholder.jpg",
+		"path": "/professionnel/credit.jpg",
 		"alt":"assurance crédit photo"
 	}
 },
 {
 	"num": 8,
-	"text": "Texte responsabilité civile",
+	"text": "L'entreprise doit impérativement se prémunir contre les dommages (matériel/corporel/immatériel) pouvant être causés aux tiers. Il est donc important de mettre en place une responsabilité civile avec l'entreprise tenant compte de ses besoins (RC Exploitation, RC après livraison ou travaux, RC Dirigeant, Défense Recours...).",
 	"heading": "Responsabilité civile",
 	"image": {
-		"path": "/placeholder.jpg",
+		"path": "/professionnel/rc.jpg",
 		"alt":"responsabilité civile photo"
 	}
 }]

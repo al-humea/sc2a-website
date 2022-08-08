@@ -2,6 +2,10 @@
 	export default {
 		name : "Carousel",
 		props: {
+			statut: {
+				type: String,
+				required: true
+			},
 			items : {
 				type : Array,
 				required: true
@@ -12,8 +16,6 @@
 				current: 1,
 				showText: false
 			})
-		},
-		computed : {
 		},
 		methods: {
 			incrementSlider(){
@@ -29,6 +31,12 @@
 			},
 			toggleSlide(){
 				this.showText = !this.showText;
+			},
+			contacter(name){
+				this.$store.dispatch("updateRequest",{
+					obj:"[" + name +"] Détail de la demande",
+					status: this.statut
+				});
 			}
 		}
 	}
@@ -36,19 +44,19 @@
 
 <template>
 	<div id="Carousel">
-		<div v-for="item in items">
+		<div v-for="item in items" id="frame">
 			<div v-if="item.num === current" class="slide">
-				<transition name="textAnim">
-					<div v-if="showText" id="text-panel">
+				<transition name="textAnim" id="text-panel">
+					<div v-if="showText">
 						<p>{{item.text}}</p>
 						<div id="bottomSB">
-							<router-link to="/Contact">Demander un devis</router-link>
+							<router-link @click="contacter(item.heading)" to="/Contact">Demander un devis</router-link>
 							<img @click="toggleSlide" src="/chevron-right.svg" id="down-button"/>
 						</div>
 					</div>
 				</transition>
-				<transition name="bgAnim">
-					<div v-if="!showText" id="slide-content">
+				<transition name="bgAnim" id="slide-content">
+					<div v-if="!showText">
 						<img @click="decrementSlider" src="/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
 						<div @click="toggleSlide" id="slide-text">
 							<h2>{{item.heading}}</h2>
@@ -63,25 +71,49 @@
 </template>
 
 <style scoped>
+	.content {
+		padding: 0;
+	}
+	#frame {
+		display: flex;
+		justify-content: center;
+	}
 	.slide {
-		margin: 0% 10%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		align-items: center;
+		max-width: 85%;
+		max-height: 50vh;
+	}
+	/*image de la slide*/
+	#offre-img{
 		position: relative;
+		grid-column: 1;
+		grid-row: 1;
+		z-index: 0;
+		width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+		overflow: hidden;
+		box-shadow: 0px 0px 0.5vw 0.01px black;
 	}
 	/*texte et flèches de la slide*/
 	#text-panel {
-		background-color: white;
-		position: absolute;
+		grid-column: 1;
+		grid-row: 1;
 		z-index: 1;
+
+		background-color: white;
 		text-align: justify;
 		width: 100%;
-		height: 100%;
+		height: 50vh;
 		color: black;
-
-		box-sizing: border-box;
 		padding: 10%;
+		box-sizing: border-box;
+
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: space-between;
 	}#text-panel a, a:visited, a:active{
 		margin: auto 0 auto auto;
@@ -109,17 +141,12 @@
 		flex-direction: column;
 		align-items: center;
 	}
-	/*image de la slide*/
-	#offre-img {
-		box-shadow: 0px 0px 1vw rgba(0, 0, 0, 0.20);
-		object-fit: cover;
-		object-position: center;
-		width: 100%;
-		height: 100%;
-	}
 	/*Flèches + Nom image*/
 	#slide-content {
-		position: absolute;
+		grid-column: 1;
+		grid-row: 1;
+		z-index: 1;
+
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -129,10 +156,13 @@
 	/*Texte image hover*/
 	#slide-text {
 		color: #fff;
-		width: 60%;
+		font-size: x-large;
+		text-align: center;
+		width: fit-content;
 		height: 80%;
+
 		display: flex;
-		justify-content: center;
+		justify-items: center;
 		align-items: center;
 		transition: transform 0.4s ease-in-out 0s;
 		/*fix blur during text resizing*/
@@ -151,7 +181,7 @@
 		object-fit: contain;
 		padding-right: 2%;
 		width: 10%;
-		height: 100%;
+		height: 80%;
 		filter: invert(76%) sepia(54%) saturate(1240%) hue-rotate(353deg) brightness(96%) contrast(100%) opacity(20%);
 		transition: filter 0.25s linear 0s;
 	}

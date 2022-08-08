@@ -21,9 +21,6 @@
 		color: #fff;
 		text-decoration: none;
 	}
-	nav a:hover{
-		color : yellow;
-	}
 	nav {
 		grid-row: 1;
 		grid-column: 2;

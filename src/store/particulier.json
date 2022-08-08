@@ -1,63 +1,70 @@
 [{
 	"num": 1,
-	"text": "Vous êtes propriétaire/locataire d'une maison ou d'un appartement ? Nous trouverons l'assurance idéale pour votre résidence.",
+	"text": "C'est en 1666 suite aux terribles incendie de Londres qu'est née l'assurance habitation. Que vous soyez propriétaire ou locataire d'une maison ou d'un appartement l'assurance habitation est indispensable pour couvrir vos biens contre les risques d'incendie, de dégéts des eaux, de vol, de bris de glaces ou encore pour couvrir votre responsabilité civile en cas de dommages causés à autrui. L'assurance habitation est obligatoire pour les locataires et les copropriétaires. Même si les propriétaires n'ont pas d'obligation d'assurance, celle-ci reste néanmoins trés importante pour protéger ce qui représente souvent le capital d'une vie. En nous contactant nous rechercherons auprés de nos partenaires des solutions adaptées à vos besoins.",
 	"heading": "Assurance Habitation",
 	"image": {
 		"path": "/particulier/habitation.jpg",
-		"alt": "habitation photo"
+		"alt": "grandpa holding child",
+		"credit": "Photo by Johnny Cohen on Unsplash"
 	}
 },
 {
 	"num": 2,
-	"text": "Texte auto.",
+	"text": "C'est en 1958 que la loi française fait obligation d'assurance en matière de circulation de véhicules terrestres à moteur. En 1985 avec la loi Badinter cette obligation d'assurance s'est renforcée en améliorant la situation des victimes d'accidents de la circulation et en accélèrant les procédures d'indemnisation. Seule la responsabilité civile est obligatoire mais des options sont possibles (Incendie, Vol, Bris de glaces, Assistance, Dommages tous accidents...).",
 	"heading": "Auto",
 	"image": {
-		"path": "/placeholder.jpg",
-		"alt": "auto photo"
+		"path": "/particulier/auto.jpg",
+		"alt": "woman driving car",
+		"credit": "Photo by Jenny Ueberberg on Unsplash"
 	}
 },
 {
 	"num": 3,
-	"text": "Texte complémentaire santé.",
+	"text": "L'objectif de l'assurance complémentaire santé est de rembourser tout ou partie des frais restant à charge du patient en complément des prestations versées par l'assurance maladie. Avec la télétransmission et le Tiers Payant, vous évitez le plus souvent d'avancer les frais de santé. Nous vous proposons, en tant que courtier spécialisé, de rechercher avec vous la solution vous correspondant le mieux",
 	"heading": "Complémentaire santé",
 	"image": {
-		"path": "/placeholder.jpg",
-		"alt":"complémentaire santé photo"
+		"path": "/particulier/sante.jpg",
+		"alt":"man getting bandaid",
+		"credit": "Photo by CDC on Unsplash"
 	}
 },
 {
 	"num": 4,
-	"text": "Texte protection juridique.",
+	"text": "Parce qu'il est indispensable de défendre vos droits au quotidien, l'assurance Protection Juridique intervient dans des domaines comme le logement, la consommation, le travail, les successions, le voisinage... En souscrivant un contrat de protection juridique vous bénéficierez de conseils par téléphone, d'avis juridiques d'experts, de la prise en charge de votre défense auprès des tribunaux.",
 	"heading": "Protection juridique",
 	"image": {
-		"path": "/placeholder.jpg",
-		"alt":"protection juridique photo"
+		"path": "/particulier/juridique.jpg",
+		"alt":"lady justice",
+		"credit": "Photo by Tingey Injury Law Firm on Unsplash"
 	}
 },
 {
 	"num": 5,
-	"text": "Texte prévoyance.",
+	"text": "Le contrat de prévoyance garantit le décès, l'incapacité et l'invalidité. Parce qu'il est essentiel de se prémunir contre les risques de l'existence, la garantie prévoyance intervient en complément des prestations servies par les régimes obligatoires de sécurité sociale. La garantie décès permet de verser un capital ou une rente à la personne que vous aurez désignée au contrat si vous veniez à décéder. La garantie incapacité permettra en cas d'arrêt de travail de compenser tout ou partie de votre perte de revenus. La garantie invalidité, sous forme de rente, complètera les indemnités versées par le régime de sécurité sociale et cas de maladie ou d'accident et selon un barême fixé par la sécurité sociale.",
 	"heading": "Prévoyance",
 	"image": {
-		"path": "/placeholder.jpg",
-		"alt":"prévoyance photo"
+		"path": "/particulier/prevoyance.jpg",
+		"alt":"peoples holding hands",
+		"credit":"Photo by Priscilla Du Preez on Unsplash"
 	}
 },
 {
 	"num": 6,
-	"text": "Texte épargne retraite",
+	"text": "Les contrats d'épargne plus communément appelés 'assurance vie' permettent dans un cadre fiscale favorable de se constituer un capital pour un projet futur ou de préparer sa retraite par le versement d'un capital ou d'une rente. Votre épargne n'est pas bloquée et reste disponible à tout moment. Vous choisirez avec nous les montants que vous souhaitez épargner et la répartition de votre épargne (fonds euros, unités de compte).",
 	"heading": "Épargne retraite",
 	"image": {
-		"path": "/placeholder.jpg",
-		"alt":"épargne retraite photo"
+		"path": "/particulier/retraite.jpg",
+		"alt":"old peoples playing chess",
+		"credit":"Photo by Vlad Sargu on Unsplash"
 	}
 },
 {
 	"num": 7,
-	"text": "Texte assurance crédit",
+	"text": "Dés que vous empruntez de l'argent à un organisme bancaire, il vous est impérativement demandé un contrat de garantie emprunteur. Si à l'origine les organismes bancaires se réservaient la possibilité de souscrire pour vous l'assurance emprunteur, la loi a changée et permet désormais à celui qui emprunte de s'assurer auprès de l'organisme de son choix. Cette possibilité est envisageable à la souscription de l'emprunt puis, chaque année, à l'échéance anniversaire. Choisir son propre assureur pour garantir le prêt à la banque permet très souvent d'économiser plusieurs milliers d'euros de cotisation sur toute la durée du prêt",
 	"heading": "Assurance crédit",
 	"image": {
-		"path": "/placeholder.jpg",
-		"alt":"assurance crédit photo"
+		"path": "/particulier/credit.jpg",
+		"alt":"man toy sitting on money",
+		"credit":"Photo by Mathieu Stern on Unsplash"
 	}
 }]

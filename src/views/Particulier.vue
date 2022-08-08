@@ -17,7 +17,7 @@ export default {
 
 <template>
 	<div class="content">
-		<Carousel :items="offres"/>
+		<Carousel statut="Particulier" :items="offres"/>
 	</div>
 </template>
 
