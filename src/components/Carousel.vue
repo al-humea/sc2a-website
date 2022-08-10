@@ -13,21 +13,21 @@
 		},
 		data() {
 			return ({
-				current: 1,
+				current: 2,
 				showText: false
 			})
 		},
 		methods: {
 			incrementSlider(){
 				this.current++;
-				if (this.current > this.items.length){
-					this.current = 1;
+				if (this.current == this.items.length){
+					this.current = 0;
 				}
 			},
 			decrementSlider(){
 				this.current--;
-				if (this.current === 0)
-					this.current = this.items.length;
+				if (this.current < 0)
+					this.current = this.items.length - 1;
 			},
 			toggleSlide(){
 				this.showText = !this.showText;
@@ -44,28 +44,26 @@
 
 <template>
 	<div id="Carousel">
-		<div v-for="item in items" id="frame">
-			<div v-if="item.num === current" class="slide">
-				<transition name="textAnim" id="text-panel">
-					<div v-if="showText">
-						<p>{{item.text}}</p>
-						<div id="bottomSB">
-							<router-link @click="contacter(item.heading)" to="/Contact">Demander un devis</router-link>
-							<img @click="toggleSlide" src="/chevron-right.svg" id="down-button"/>
-						</div>
+		<div  class="slide">
+			<transition name="textAnim" id="text-panel">
+				<div v-if="showText">
+					<p>{{items[current].text}}</p>
+					<div id="bottomSB">
+						<router-link @click="contacter(items[current].heading)" to="/Contact">Demander un devis</router-link>
+						<img @click="toggleSlide" src="/chevron-right.svg" id="down-button"/>
 					</div>
-				</transition>
-				<transition name="bgAnim" id="slide-content">
-					<div v-if="!showText">
-						<img @click="decrementSlider" src="/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
-						<div @click="toggleSlide" id="slide-text">
-							<h2>{{item.heading}}</h2>
-						</div>
-						<img @click="incrementSlider" src="/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
+				</div>
+			</transition>
+			<transition id="slide-content" name="bgAnim">
+				<div v-show="!showText" >
+					<img @click="decrementSlider" src="/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
+					<div @click="toggleSlide" id="slide-text">
+						<h2>{{items[current].heading}}</h2>
 					</div>
-				</transition>
-				<img id="offre-img" :src="item.image.path" :alt="item.image.alt"/>
-			</div>
+					<img @click="incrementSlider" src="/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
+				</div>
+			</transition>
+			<img id="offre-img" :src="items[current].image.path" :alt="items[current].image.alt"/>
 		</div>
 	</div>
 </template>
@@ -74,7 +72,7 @@
 	.content {
 		padding: 0;
 	}
-	#frame {
+	#Carousel {
 		display: flex;
 		justify-content: center;
 	}
@@ -111,13 +109,16 @@
 		color: black;
 		padding: 10%;
 		box-sizing: border-box;
+		text-shadow:0 0 1px transparent;
 
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}#text-panel a, a:visited, a:active{
+		font-family: "Blaimim";
+		font-size: medium;
 		margin: auto 0 auto auto;
-		width: 30%;
+		width: 42%;
 		padding: 2% 0%;
 		text-align: center;
 		background-color: #F4B907;
@@ -199,7 +200,6 @@
 	.textAnim-leave-active{
 		transition: opacity 0.5s ease-in, transform 0.5s ease-out;
 	}
-
 	.bgAnim-enter-from,
 	.bgAnim-leave-to{
 		opacity: 0;

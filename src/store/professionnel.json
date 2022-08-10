@@ -4,7 +4,8 @@
 	"heading": "Locaux professionnel",
 	"image": {
 		"path": "/professionnel/locaux.jpg",
-		"alt": "locaux pro photo"
+		"alt": "meeting in the office",
+		"credit":"Photo by Jason Goodman on Unsplash"
 	}
 },
 {
@@ -13,7 +14,8 @@
 	"heading": "Auto ou flotte auto",
 	"image": {
 		"path": "/professionnel/flotte.jpg",
-		"alt": "auto/flotte auto photo"
+		"alt": "vehicle fleet",
+		"credit":"Photo by Markus Winkler on Unsplash"
 	}
 },
 {
@@ -22,7 +24,8 @@
 	"heading": "Collectif frais de santé",
 	"image": {
 		"path": "/professionnel/collsante.jpg",
-		"alt":"Collectif frais de santé photo"
+		"alt":"peoples holding hands",
+		"credit":"Photo by krakenimages on Unsplash"
 	}
 },
 {
@@ -31,7 +34,8 @@
 	"heading": "Protection juridique",
 	"image": {
 		"path": "/professionnel/juridique.jpg",
-		"alt":"protection juridique photo"
+		"alt":"lady justice",
+		"credit": "Photo by Tingey Injury Law Firm on Unsplash"
 	}
 },
 {
@@ -40,7 +44,8 @@
 	"heading": "Prévoyance individuelle ou collective",
 	"image": {
 		"path": "/professionnel/prevoyance.jpg",
-		"alt":"prévoyance entreprise photo"
+		"alt":"happy construction worker",
+		"credit":"Photo by mina rad on Unsplash"
 	}
 },
 {
@@ -49,7 +54,8 @@
 	"heading": "Épargne retraite ",
 	"image": {
 		"path": "/professionnel/retraite.jpg",
-		"alt":"épargne retraite photo"
+		"alt":"old peoples playing chess",
+		"credit":"Photo by Vlad Sargu on Unsplash"
 	}
 },
 {
@@ -58,7 +64,8 @@
 	"heading": "Assurance crédit",
 	"image": {
 		"path": "/professionnel/credit.jpg",
-		"alt":"assurance crédit photo"
+		"alt":"building in construction",
+		"credit":"Photo by Ryunosuke Kikuno on Unsplash"
 	}
 },
 {
@@ -67,6 +74,7 @@
 	"heading": "Responsabilité civile",
 	"image": {
 		"path": "/professionnel/rc.jpg",
-		"alt":"responsabilité civile photo"
+		"alt":"handshake",
+		"credit":"Photo by Austin Kehmeier on Unsplash"
 	}
 }]
