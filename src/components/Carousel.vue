@@ -44,59 +44,53 @@
 
 <template>
 	<div id="Carousel">
-		<div  class="slide">
-			<transition name="textAnim" id="text-panel">
-				<div v-if="showText">
-					<p>{{items[current].text}}</p>
-					<div id="bottomSB">
-						<router-link @click="contacter(items[current].heading)" to="/Contact">Demander un devis</router-link>
-						<img @click="toggleSlide" src="/chevron-right.svg" id="down-button"/>
-					</div>
+		<transition name="textAnim" id="text-panel">
+			<div v-if="showText">
+				<p>{{items[current].text}}</p>
+				<div id="bottomSB">
+					<router-link @click="contacter(items[current].heading)" to="/Contact">Demander un devis</router-link>
+					<img @click="toggleSlide" src="/chevron-right.svg" id="down-button"/>
 				</div>
-			</transition>
-			<transition id="slide-content" name="bgAnim">
-				<div v-show="!showText" >
-					<img @click="decrementSlider" src="/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
-					<div @click="toggleSlide" id="slide-text">
-						<h2>{{items[current].heading}}</h2>
-					</div>
-					<img @click="incrementSlider" src="/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
+			</div>
+		</transition>
+		<transition id="slide-content" name="bgAnim">
+			<div v-show="!showText" >
+				<img @click="decrementSlider" src="/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
+				<div @click="toggleSlide" id="slide-text">
+					<h2>{{items[current].heading}}</h2>
 				</div>
-			</transition>
-			<img id="offre-img" :src="items[current].image.path" :alt="items[current].image.alt"/>
-		</div>
+				<img @click="incrementSlider" src="/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
+			</div>
+		</transition>
+		<img id="offre-img" :src="items[current].image.path" :alt="items[current].image.alt"/>
 	</div>
 </template>
 
 <style scoped>
-	.content {
-		padding: 0;
-	}
 	#Carousel {
-		display: flex;
-		justify-content: center;
-	}
-	.slide {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
 		align-items: center;
-		max-width: 85%;
-		max-height: 50vh;
+		justify-content: center;
+		margin: 0 auto;
+		width: 50vw;
+		min-height: 500px;
+		height: 60vh;
 	}
+
 	/*image de la slide*/
 	#offre-img{
-		position: relative;
 		grid-column: 1;
 		grid-row: 1;
 		z-index: 0;
 		width: 100%;
-		max-height: 100%;
+		height: 100%;
 		object-fit: cover;
 		overflow: hidden;
 		box-shadow: 0px 0px 0.5vw 0.01px black;
 	}
-	/*texte et flèches de la slide*/
+	/*texte et flèches de la slide descendante*/
 	#text-panel {
 		grid-column: 1;
 		grid-row: 1;
@@ -105,7 +99,8 @@
 		background-color: white;
 		text-align: justify;
 		width: 100%;
-		height: 50vh;
+		height: 60vh;
+		min-height: 500px;
 		color: black;
 		padding: 10%;
 		box-sizing: border-box;
@@ -114,12 +109,15 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-	}#text-panel a, a:visited, a:active{
+	}
+
+	/*Bouton slide descendant*/
+	#text-panel a, a:visited, a:active{
 		font-family: "Blaimim";
 		font-size: medium;
 		margin: auto 0 auto auto;
-		width: 42%;
-		padding: 2% 0%;
+		width: fit-content;
+		padding: 2%;
 		text-align: center;
 		background-color: #F4B907;
 		color: #000E14;
@@ -128,6 +126,7 @@
 		background-color: #d29f04;
 		color: #000;
 	}
+	/*Bouton descendre slide texte*/
 	#down-button {
 		transform: rotate(-90deg);
 		cursor:pointer;
@@ -142,7 +141,7 @@
 		flex-direction: column;
 		align-items: center;
 	}
-	/*Flèches + Nom image*/
+	/*Flèches + Nom image sans descente*/
 	#slide-content {
 		grid-column: 1;
 		grid-row: 1;
@@ -175,6 +174,9 @@
 		cursor:pointer;
 		transform: scale(1.1) translateY(-10px);
 	}
+
+
+
 	/*Fleches style*/
 	#left-slide-button {transform: scaleX(-1);}
 	.slide-buttons {
@@ -189,6 +191,22 @@
 	.slide-buttons:hover {
 		filter: invert(76%) sepia(54%) saturate(1240%) hue-rotate(353deg) brightness(96%) contrast(100%) opacity(100%);
 	}
+
+	@media screen and (max-width: 1250px){
+		#Carousel {
+			width: 70vw;
+		}
+	 }
+	 @media screen and (max-width: 1000px){
+		#Carousel {
+			width: 80vw;
+		}
+	 }
+	 @media screen and (max-width: 750px){
+		#Carousel {
+			width: 100vw;
+		}
+	 }
 
 	/*Animation TEXTE slider*/
 	.textAnim-enter-from,

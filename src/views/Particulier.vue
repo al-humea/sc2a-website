@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-	<div class="content">
+	<div>
 		<Carousel statut="Particulier" :items="offres"/>
 	</div>
 </template>

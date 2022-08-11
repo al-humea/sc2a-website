@@ -46,7 +46,7 @@ export default {
 
 	.content {
 		width: 50%;
-		min-width: 600px;
+		min-width: 323px;
 		padding: 5vh 0%;
 	}
 	/*Delete la scroll bar et set la maxwidth*/
