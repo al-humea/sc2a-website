@@ -18,6 +18,7 @@ export default {
 </template>
 
 <style>
+	*{margin: 0; padding: 0;}
 	@font-face {
 		font-family: "Blaimim";
 		src: local("Blaimim"),
@@ -31,10 +32,11 @@ export default {
 	nav , footer , h2{
 		font-family: "Blaimim";
 	}
-	* {margin: 0; padding: 0;}
+
 	#app {
 		min-height: 100vh;
-		width: 100%;
+		width: 100vw;
+
 		display:flex;
 		flex-direction: column;
 		align-items: center;
@@ -45,9 +47,13 @@ export default {
 	}
 
 	.content {
-		width: 50%;
-		min-width: 323px;
+		width: 60%;
 		padding: 5vh 0%;
+	}
+	@media screen and (max-width: 1000px){
+		.content {
+			width: 80%;
+		}
 	}
 	/*Delete la scroll bar et set la maxwidth*/
 	body {

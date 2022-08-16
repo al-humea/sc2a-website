@@ -101,11 +101,11 @@ export default {
 
 	@media screen and (min-width: 1000px){
 		#contact {
-			width: 50%;
 			height: 100%;
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(7, 1fr);
+			justify-content: space-between;
 			gap: 1vw;
 		}
 		#objet {grid-column: 1/3;}

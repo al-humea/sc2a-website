@@ -13,22 +13,23 @@
 </script>
 
 <template>
-	<Transition>
-		<div @click="toggle" id="burgerButton" v-if="!status">
-			<div id="line1"></div>
-			<div id="line2"></div>
-			<div id="line3"></div>
-		</div>
-		<div @click="toggle" id="burgerButton" v-else-if="status">
-			<div id="line1"></div>
-			<div id="line3"></div>
-		</div>
-	</Transition>
+	<div @click="toggle" id="burgerButton" >
+		<div id="line1" :class="{straightUp:!status, downward:status }"></div>
+		<Transition name="middlebar">
+			<div id="line2" v-if="!status"></div>
+		</Transition>
+		<div id="line3" :class="{straightBot:!status, upward:status }"></div>
+	</div>
 </template>
 
 <style scoped>
+
 #burgerButton {
-	z-index: 3;
+	margin: 5vh 0vw 0vh 5vw;
+
+	
+	grid-column: 1;
+	grid-row: 1;
 	height: 5vh;
 	min-height: 50px;
 	width: 5vh;
@@ -38,21 +39,62 @@
 	justify-content: space-between;
 }
 #burgerButton > div{
-	z-index: 3;
 	min-width: 50px;
 	width: 5vh;
 	min-height: 10px;
 	height: 1vh;
-	background-color: red;
+	background-color: #243187;
+	border-radius: 5px;
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
+#burgerButton:hover {
+	cursor: pointer;
 }
 
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
+.downward {
+	animation : rotateDown 1s ease-in-out forwards;
+}
+
+@keyframes rotateDown {
+	from {transform : rotate(0deg) translateY(0%);}
+	to {transform: translateY(200%) rotate(45deg);}
+}
+
+.upward {
+	animation : rotateUp 1s ease-in-out forwards;
+}
+
+@keyframes rotateUp {
+	from {transform : rotate(0deg), translateY(0%);}
+	to {transform: translateY(-200%) rotate(-45deg);}
+}
+
+.straightBot {
+	animation : straightenBot 1s ease-in-out forwards;
+}
+
+@keyframes straightenBot {
+	from {transform : translateY(-200%) rotate(-45deg);}
+	to {transform: translateY(0%) rotate(0deg);}
+}
+
+.straightUp {
+	animation : straightenUp 1s ease-in-out forwards;
+}
+
+@keyframes straightenUp {
+	from {transform : translateY(200%) rotate(45deg);}
+	to {transform: rotate(0deg) translateY(0%);}
+}
+
+
+.middlebar-enter-active,
+.middlebar-leave-active {
+	transition: opacity 0.5s ease-in, transform;
+}
+
+.middlebar-enter-from,
+.middlebar-leave-to {
+	opacity: 0;
 }
 </style>
