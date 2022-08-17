@@ -116,8 +116,8 @@ export default {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(7, 1fr);
-			justify-content: space-between;
 			gap: 1vh;
+			align-items: space-between;
 		}
 		#objet {grid-column: 1/3;}
 		#contenu {grid-column: 1/3;grid-row: 5/7; height: auto;}

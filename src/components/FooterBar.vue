@@ -33,6 +33,7 @@
 	}
 
 	a {
+		color : white;
 		width: fit-content;
 		position: relative;
 		text-decoration: none;

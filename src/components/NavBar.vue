@@ -30,6 +30,7 @@
 	}
 
 	#pc-nav {
+		
 		font-size: larger;
 
 		position: absolute;

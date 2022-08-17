@@ -13,7 +13,9 @@ export default {
 
 <template>
 	<NavBar/>
-	<router-view/>
+	<Transition name="pageTransition" mode="out-in">
+		<router-view/>
+	</Transition>
 	<FooterBar/>
 </template>
 
@@ -48,7 +50,7 @@ export default {
 
 	.content {
 		width: 60%;
-		padding: 5vh 0%;
+		margin: 5vh 0%;
 	}
 	@media screen and (max-width: 1024px){
 		.content {
@@ -63,5 +65,21 @@ export default {
 	}
 	::-webkit-scrollbar {
 		display: none;
+	}
+
+	/*Page transition*/
+	.pageTransition-leave-active,
+	.pageTransition-enter-active {
+		transition: transform 1s ease-in-out;
+	}
+	.pageTransition-enter-to,
+	.pageTransition-leave-from {
+		transform :  translateX(0);
+	}
+	.pageTransition-enter-from {
+		transform: translateX(-100vw);
+	}
+	.pageTransition-leave-to {
+		transform: translateX(100vw);
 	}
 </style>

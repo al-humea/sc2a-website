@@ -14,6 +14,7 @@
 
 <style scoped>
 	.navLink{
+		color : white;
 		width: fit-content;
 		position: relative;
 		text-decoration: none;
@@ -21,7 +22,7 @@
 	.navLink:visited{
 		color : white;
 	}
-	.navLink:active {
+	.navLink:active, .navLink.current{
 		color : #F4B907;
 	}
 	.navLink::after {
