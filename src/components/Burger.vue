@@ -35,14 +35,14 @@ export default{
 	#burger {
 		display: none;
 	}
-	@media screen and (max-width: 1000px){
+	@media screen and (max-width: 1024px){
 		#burgerButton {
 			position: absolute;
-			z-index: 4;
+			z-index: 5;
 		}
 		#burger {
 			position: fixed;
-			z-index: 3;
+			z-index: 4;
 			top:0;
 			left:0;
 			display: block;

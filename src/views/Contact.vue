@@ -44,7 +44,7 @@ export default {
 </script>
 
 <template>
-	<form v-if="captcha" id="contact" class="content padded">
+	<form v-if="captcha" id="contact" class="content">
 		<label for="dropdown">Vous êtes un
 			<select name="Statut" id="dropdown" class="field" v-model="statut">
 				<option value="Particulier">Particulier</option>
@@ -83,6 +83,11 @@ export default {
 </template>
 
 <style scoped>
+	#contact {
+		display: flex;
+		flex-direction: column;
+		gap: 2vh;
+	}
 	label {display:flex; flex-direction: column;}
 	.field {
 		height: 100%;
@@ -94,23 +99,29 @@ export default {
 		padding: 1vw;
 		resize: none;
 		box-sizing: border-box;
+		height: 30vh;
+	}
+	input[type="submit"] {
+		background-color: #fff;
+		width: 50%;
+		align-self: end;
 	}
 	input[type="submit"]:hover {
 		background-color: rgb(203, 203, 203);
 	}
 
-	@media screen and (min-width: 1000px){
+	@media screen and (min-width: 1024px){
 		#contact {
 			height: 100%;
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(7, 1fr);
 			justify-content: space-between;
-			gap: 1vw;
+			gap: 1vh;
 		}
 		#objet {grid-column: 1/3;}
-		#contenu {grid-column: 1/3;grid-row: 5/7;}
-		#submit {grid-column: 2; grid-row: 7;}
+		#contenu {grid-column: 1/3;grid-row: 5/7; height: auto;}
+		#submit {grid-column: 2; grid-row: 7;width: 100%}
 		#nom, #prenom{grid-row: 2;}
 		#tel, #email{grid-row: 3;}
 	}

@@ -50,7 +50,7 @@ export default {
 		width: 60%;
 		padding: 5vh 0%;
 	}
-	@media screen and (max-width: 1000px){
+	@media screen and (max-width: 1024px){
 		.content {
 			width: 80%;
 		}
