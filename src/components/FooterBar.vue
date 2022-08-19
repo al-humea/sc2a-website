@@ -1,17 +1,22 @@
 <script>
 	export default{
-		name: "FooterBar"
+		name: "FooterBar",
+		methods: {
+			updateTransition(){
+				this.$store.commit("UPD_TRAN", "fade");
+			}
+		}
 	}
 </script>
 
 <template>
 	<footer>
 		<nav>
-			<router-link to="/Accueil">@SC2A</router-link>
-			<router-link to="/MentionsLegales">MENTIONS LÉGALES</router-link>
-			<router-link to="/Accueil">
+			<router-link @click="updateTransition()" to="/Accueil">@SC2A</router-link>
+			<router-link @click="updateTransition()" to="/MentionsLegales">MENTIONS LÉGALES</router-link>
+			<a href="https://www.google.fr/maps/dir/?api=1&destination=63+Av.+Jean+Lolive%20+93500+Pantin" target="_blank">
 				NOTRE AGENCE
-			</router-link>
+			</a>
 		</nav>
 	</footer>
 </template>
@@ -20,28 +25,46 @@
 	footer {
 		background-color: #273188;
 		width: 100vw;
-		height: 50px;
+		min-height: 50px;
+		height: 5vh;
 	}
 
 	nav {
-		display: flex;
-		width: 50%;
-		align-items: center;
-		justify-content: space-between;
-		margin: 0 auto;
+		background-color: yellow;
+
 		height: 100%;
+		width: 50%;
+		margin: auto;
+
+		display: flex;
+		justify-content: space-between;	
+		align-items: center;
 	}
 
 	a {
+		background-color: red;
+
 		color : white;
-		width: fit-content;
-		position: relative;
+		text-align: center;
 		text-decoration: none;
 	}
 	a:visited, a:active {
 		color : white;
 	}
-	a + a {
-		margin-left: 35px;
+
+	@media screen and (max-width: 1400px){
+		nav {
+			width: 70%;
+		}
+	}
+	@media screen and (max-width: 1024px){
+		footer {
+			position:sticky;
+			bottom: 0;
+			left: 0;
+		}
+		a {
+			width: min-content;
+		}
 	}
 </style>

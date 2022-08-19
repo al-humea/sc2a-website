@@ -1,6 +1,6 @@
 <script>
 	export default {
-    name: "MentionsLegales"
+		name: "MentionsLegales"
 	}
 </script>
 
@@ -68,7 +68,7 @@
 			</table>
 		</div>
 		<div id="Hebergeur">
-			<h2>Hebergeur</h2>
+			<h2>Hebergeur (Mettre à jour)</h2>
 			<p>ORANGE<br>Société anonyme au capital de 10 640 226 396 euros, RCS Nanterre 380 129 866<br>
 			Siège social</p>
 			<ul>
@@ -118,6 +118,9 @@
 </template>
 
 <style scoped>
+	div + div{
+		margin-top: 2vh;
+	}
 	#Mentions ~ * h2{
 		margin: 1% 0% 0% 0%;
 	}

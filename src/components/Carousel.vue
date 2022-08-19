@@ -174,6 +174,9 @@
 		cursor:pointer;
 		transform: scale(1.1) translateY(-10px);
 	}
+	#slide-text:hover ~ #offre-img{
+		transform: scale(1.1) translateY(-10px);
+	}
 
 
 
@@ -192,7 +195,7 @@
 		filter: invert(76%) sepia(54%) saturate(1240%) hue-rotate(353deg) brightness(96%) contrast(100%) opacity(100%);
 	}
 
-	@media screen and (max-width: 1250px){
+	@media screen and (max-width: 1400px){
 		#Carousel {
 			width: 70vw;
 		}

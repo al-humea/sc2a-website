@@ -3,13 +3,23 @@
 		name: "NavLink",
 		props:{
 			text: String,
-			path: String
+			path: String,
+			slideNum: Number
+		},
+		methods:{
+			updateTransition(){
+				if (this.slideNum < this.$store.state.curPageNum)
+					this.$store.commit("UPD_TRAN", "slideLeft");
+				if (this.slideNum > this.$store.state.curPageNum)
+					this.$store.commit("UPD_TRAN", "slideRight");
+				this.$store.commit("UPD_CURPAGE", this.slideNum);
+			}
 		}
 	}
 </script>
 
 <template>
-	<router-link class="navLink" :to="path">{{text}}</router-link>
+	<router-link @click="updateTransition()" class="navLink" :to="path">{{text}}</router-link>
 </template>
 
 <style scoped>

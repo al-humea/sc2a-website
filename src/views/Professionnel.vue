@@ -20,6 +20,3 @@ export default {
 		<Carousel statut="Professionnel" :items="offres"/>
 	</div>
 </template>
-
-<style>
-</style>

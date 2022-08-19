@@ -120,8 +120,8 @@ export default {
 			align-items: space-between;
 		}
 		#objet {grid-column: 1/3;}
-		#contenu {grid-column: 1/3;grid-row: 5/7; height: auto;}
-		#submit {grid-column: 2; grid-row: 7;width: 100%}
+		#contenu {grid-column: 1/3;grid-row: 5/8; height: auto;}
+		#submit {grid-column: 2; grid-row: 8;width: 100%}
 		#nom, #prenom{grid-row: 2;}
 		#tel, #email{grid-row: 3;}
 	}

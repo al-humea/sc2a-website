@@ -9,7 +9,9 @@ export default createStore({
 		tel : "",
 		email : "",
 		obj : "",
-		content : ""
+		content : "",
+		transition : "",
+		curPageNum : 1
 	},
 	mutations: {
 		UPD_OBJ(state, payload){	state.obj = String(payload);},
@@ -19,7 +21,9 @@ export default createStore({
 		UPD_PRE(state, payload){	state.pren = String(payload);},
 		UPD_TEL(state, payload){	state.tel = String(payload);},
 		UPD_EMAIL(state, payload){	state.email = String(payload);},
-		UPD_CONT(state, payload){	state.content = String(payload);}
+		UPD_CONT(state, payload){	state.content = String(payload);},
+		UPD_TRAN(state, payload){	state.transition = String(payload);},
+		UPD_CURPAGE(state, payload){	state.curPageNum = Number(payload)}
 	},
 	actions: {
 		updateRequest(context, payload){

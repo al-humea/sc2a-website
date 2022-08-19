@@ -13,13 +13,17 @@ export default {
 
 <template>
 	<NavBar/>
-	<Transition name="pageTransition" mode="out-in">
-		<router-view/>
-	</Transition>
+	<router-view v-slot="content">
+		<Transition :name="this.$store.state.transition" mode="out-in">
+			<component :is="content.Component"></component>
+		</Transition>
+	</router-view>
 	<FooterBar/>
 </template>
 
 <style>
+	@import "./assets/transitions.css";
+
 	*{margin: 0; padding: 0;}
 	@font-face {
 		font-family: "Blaimim";
@@ -66,20 +70,8 @@ export default {
 	::-webkit-scrollbar {
 		display: none;
 	}
-
-	/*Page transition*/
-	.pageTransition-leave-active,
-	.pageTransition-enter-active {
-		transition: transform 1s ease-in-out;
-	}
-	.pageTransition-enter-to,
-	.pageTransition-leave-from {
-		transform :  translateX(0);
-	}
-	.pageTransition-enter-from {
-		transform: translateX(-100vw);
-	}
-	.pageTransition-leave-to {
-		transform: translateX(100vw);
-	}
 </style>
+
+
+
+FICHIER CSS AVEC LES TRANSITIONS
