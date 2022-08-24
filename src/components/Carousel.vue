@@ -18,6 +18,9 @@
 			})
 		},
 		methods: {
+			toSlide(num){
+				this.current = num - 1;
+			},
 			incrementSlider(){
 				this.current++;
 				if (this.current == this.items.length){
@@ -28,9 +31,6 @@
 				this.current--;
 				if (this.current < 0)
 					this.current = this.items.length - 1;
-			},
-			toggleSlide(){
-				this.showText = !this.showText;
 			},
 			contacter(name){
 				this.$store.dispatch("updateRequest",{
@@ -43,144 +43,101 @@
 </script>
 
 <template>
-	<div id="Carousel">
-		<transition name="textAnim" id="text-panel">
-			<div v-if="showText">
-				<p>{{items[current].text}}</p>
-				<div id="bottomSB">
-					<router-link @click="contacter(items[current].heading)" to="/Contact">Demander un devis</router-link>
-					<img @click="toggleSlide" src="/chevron-right.svg" id="down-button"/>
-				</div>
+	<div id="Carousel" :style="{ backgroundImage: 'url(' + items[current].image.path + ')' }">
+		<div id="menu">
+			<div v-for="item in items" :class='{menuButton : true, glass : !(item.num - 1 == this.current)}' @click="toSlide(item.num)">
+				{{item.heading}}
 			</div>
-		</transition>
-		<transition id="slide-content" name="bgAnim">
-			<div v-show="!showText" >
-				<img @click="decrementSlider" src="/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
-				<div @click="toggleSlide" id="slide-text">
-					<h2>{{items[current].heading}}</h2>
-				</div>
-				<img @click="incrementSlider" src="/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
+		</div>
+
+		<img @click="decrementSlider" src="/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
+
+		<div id="slideContent">
+			<h2>{{items[current].heading}}</h2>
+			<p id="slideText">{{items[current].text}}</p>
+			<div id="contacter">
+				<router-link @click="contacter(items[current].heading)" to="/Contact">Demander un devis</router-link>
 			</div>
-		</transition>
-		<img id="offre-img" :src="items[current].image.path" :alt="items[current].image.alt"/>
+		</div>
+		
+		<img @click="incrementSlider" src="/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
 	</div>
 </template>
 
 <style scoped>
 	#Carousel {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr;
+		position: relative;
+		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin: 0 auto;
-		width: 50vw;
-		min-height: 500px;
-		height: 60vh;
+		width: 100vw;
+		height: 80vh;
+
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: white;
+	}
+	/*navigation slide*/
+	#menu {
+		position: absolute;
+		top: 4vh;
+		display: flex;
+		justify-content: space-between;
+		gap: 1vw;
+	}
+	.menuButton {
+		cursor: pointer;
+		padding: 15px;
+		background-color: #f5ba08;
+		box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px);
+		border-radius: 25px;
+		height: 20px;
+		max-width: 10vw;
+		overflow:hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		transition: max-width 0.5s ease;
+	}
+	.menuButton:hover{
+		max-width: 20vw;
+	}
+	.glass {
+		background-color: #a0a0a02e;
 	}
 
-	/*image de la slide*/
-	#offre-img{
-		grid-column: 1;
-		grid-row: 1;
-		z-index: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		overflow: hidden;
-		box-shadow: 0px 0px 0.5vw 0.01px black;
-	}
-	/*texte et flèches de la slide descendante*/
-	#text-panel {
-		grid-column: 1;
-		grid-row: 1;
-		z-index: 1;
-
-		background-color: white;
-		text-align: justify;
-		width: 100%;
-		height: 60vh;
-		min-height: 500px;
-		color: black;
-		padding: 10%;
+	/* CONTENU SLIDE*/
+	#slideContent{/* Texte slide*/
+		height: 60%;
+		width: 60%;
+		border-radius: 25px;
 		box-sizing: border-box;
-		text-shadow:0 0 1px transparent;
-
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		align-items: left;
+		font-size: x-large;
 	}
-
-	/*Bouton slide descendant*/
-	#text-panel a, a:visited, a:active{
-		font-family: "Blaimim";
-		font-size: medium;
-		margin: auto 0 auto auto;
-		width: fit-content;
-		padding: 2%;
-		text-align: center;
-		background-color: #F4B907;
-		color: #000E14;
-		text-decoration: none;
-	}#text-panel a:hover {
-		background-color: #d29f04;
+	#slideText{
+		backdrop-filter: blur(3px);
+	}
+	a:visited, a:focus, a:target, a{
 		color: #000;
+		text-decoration: none;
 	}
-	/*Bouton descendre slide texte*/
-	#down-button {
-		transform: rotate(-90deg);
-		cursor:pointer;
-		object-fit: contain;
-		width: 13%;
-		filter: invert(76%) sepia(54%) saturate(1240%) hue-rotate(353deg) brightness(96%) contrast(100%) opacity(100%);
-	}
-	#bottomSB {
-		height: 40%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	/*Flèches + Nom image sans descente*/
-	#slide-content {
-		grid-column: 1;
-		grid-row: 1;
-		z-index: 1;
-
-		width: 100%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	/*Texte image hover*/
-	#slide-text {
-		color: #fff;
-		font-family: "Blaimim";
-		font-size: medium;
-		text-align: center;
+	#contacter {	/* Bouton slide*/
+		align-self: flex-end;
+		background-color: #f5ba08;
+		box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+		border:rgba(0, 0, 0, 0.13) 0.1rem solid;
+		border-radius: 15px;
 		width: fit-content;
-		height: 80%;
-
-		display: flex;
-		justify-items: center;
-		align-items: center;
-		transition: transform 0.4s ease-in-out 0s;
-		/*fix blur during text resizing*/
-		backface-visibility: hidden;
-		transform: translateZ(0);
-		-webkit-font-smoothing: subpixel-antialiased;
+		padding: 15px;
+		font-size: x-large;
 	}
-	#slide-text:hover {
-		cursor:pointer;
-		transform: scale(1.1) translateY(-10px);
+	h2 { /**/
+		font-size:54px;
 	}
-	#slide-text:hover ~ #offre-img{
-		transform: scale(1.1) translateY(-10px);
-	}
-
-
-
 	/*Fleches style*/
 	#left-slide-button {transform: scaleX(-1);}
 	.slide-buttons {
@@ -188,46 +145,11 @@
 		object-fit: contain;
 		padding-right: 2%;
 		width: 10%;
-		height: 80%;
+		height: 10vh;
 		filter: invert(76%) sepia(54%) saturate(1240%) hue-rotate(353deg) brightness(96%) contrast(100%) opacity(20%);
 		transition: filter 0.25s linear 0s;
 	}
 	.slide-buttons:hover {
 		filter: invert(76%) sepia(54%) saturate(1240%) hue-rotate(353deg) brightness(96%) contrast(100%) opacity(100%);
-	}
-
-	@media screen and (max-width: 1400px){
-		#Carousel {
-			width: 70vw;
-		}
-	 }
-	 @media screen and (max-width: 1000px){
-		#Carousel {
-			width: 80vw;
-		}
-	 }
-	 @media screen and (max-width: 750px){
-		#Carousel {
-			width: 100vw;
-		}
-	 }
-
-	/*Animation TEXTE slider*/
-	.textAnim-enter-from,
-	.textAnim-leave-to{
-		opacity: 0;
-		transform: translateY(-100%);
-	}
-	.textAnim-enter-active,
-	.textAnim-leave-active{
-		transition: opacity 0.5s ease-in, transform 0.5s ease-out;
-	}
-	.bgAnim-enter-from,
-	.bgAnim-leave-to{
-		opacity: 0;
-	}
-	.bgAnim-enter-active,
-	.bgAnim-leave-active{
-		transition: opacity 0.5s ease-in, transform 0.5s ease-out;
 	}
 </style>
