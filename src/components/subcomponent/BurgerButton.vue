@@ -43,7 +43,7 @@
 	width: 5vh;
 	min-height: 10px;
 	height: 1vh;
-	background-color: #243187;
+	background-color: #fff;
 	border-radius: 5px;
 }
 

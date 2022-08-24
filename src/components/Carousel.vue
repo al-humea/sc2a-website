@@ -156,7 +156,8 @@
 	/*Texte image hover*/
 	#slide-text {
 		color: #fff;
-		font-size: x-large;
+		font-family: "Blaimim";
+		font-size: medium;
 		text-align: center;
 		width: fit-content;
 		height: 80%;

@@ -1,14 +1,15 @@
 <template>
 	<div class="content">
-		<h3>Après plus de 10 années d'expérience dans l'assurance, Christophe L'HUMEAU crée en 1999 la société SC2A.</h3>
 		<p>
-			Nous avons pour objectif de rechercher auprès de nos
-			différents partenaires les offres d'assurance correspondant le mieux à vos attentes, en termes de prix bien sûr, mais également en termes de garanties.
-			(produits financiers ou assurances de dommages).</p>
+			Créée en 1999 la société de courtage en assurance SC2A a pour objectif de rechercher auprès de ses
+			différents partenaires les offres d'assurance correspondant le mieux à vos attentes, en termes de prix bien sûr,
+			mais également en termes de garanties. (produits financiers ou assurances de dommages).
+		</p>
 
 		<h3>Proximité et écoute sont nos maîtres mots.</h3>
 		<p>Nos collaborateurs chercheront la solution la mieux adaptée à vos besoins.
 			Nous mettrons tout en œuvre afin de réaliser vos projets.</p>
+
 		<h3>Chez SC2A, nous avons le soucis du client.</h3>
 		<p>
 			Fiers de nos années d'expériences et de nos compétences nous vous assurerons des 

@@ -15,10 +15,11 @@
 
 <script>
 	import Burger from './Burger.vue';
+	import Banner from './subcomponent/Banner.vue'
 	import NavLink from './subcomponent/NavLink.vue';
 	export default{
 		name: "NavBar",
-		components: { Burger, NavLink}
+		components: { Burger, NavLink, Banner}
 	}
 </script>
 
@@ -26,17 +27,16 @@
 	#sc2amenu {
 		width: 100vw;
 		position: relative;
-		z-index: 3;
+		display: grid;
 	}
 
 	#pc-nav {
 		font-size: larger;
-
+		z-index: 4;
 		position: absolute;
-		margin: 0 auto;
+		margin: 15vh auto 0 auto;
 		width: 50vw;
 		left:25%;
-		background-color: red;
 
 		display: flex;
 		justify-content: space-between;
@@ -53,18 +53,9 @@
 		#pc-nav {
 			display: none;
 		}
-		#sc2abanner{
-			content: url("../assets/banner/B_SC2A_4_3.jpg");
-		}
 	}
 	@media screen and (max-width : 720px){
-		#sc2abanner{
-			content: url("../assets/banner/B_SC2A_1_1.jpg");
-		}
 	}
 	@media screen and (max-width : 360px){
-		#sc2abanner{
-			content: url("../assets/banner/B_SC2A_9_16.jpg");
-		}
 	}
 </style>

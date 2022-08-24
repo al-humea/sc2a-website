@@ -43,7 +43,8 @@
 		background-color: #F4B907;
 		border-radius: 3px;
 		width: 0%;
-		height: 6px;
+		height: 4px;
+		min-height: 0.5vh;
 		transition: width 0.3s ease, left 0.3s ease;
 	}
 	.navLink:hover::after{

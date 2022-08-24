@@ -12,7 +12,7 @@
 <template>
 	<footer>
 		<nav>
-			<router-link @click="updateTransition()" to="/Accueil">@SC2A</router-link>
+			<router-link @click="updateTransition()" to="/Accueil">©SC2A</router-link>
 			<router-link @click="updateTransition()" to="/MentionsLegales">MENTIONS LÉGALES</router-link>
 			<a href="https://www.google.fr/maps/dir/?api=1&destination=63+Av.+Jean+Lolive%20+93500+Pantin" target="_blank">
 				NOTRE AGENCE
@@ -30,8 +30,6 @@
 	}
 
 	nav {
-		background-color: yellow;
-
 		height: 100%;
 		width: 50%;
 		margin: auto;
@@ -42,8 +40,6 @@
 	}
 
 	a {
-		background-color: red;
-
 		color : white;
 		text-align: center;
 		text-decoration: none;
