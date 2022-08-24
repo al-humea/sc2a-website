@@ -84,6 +84,7 @@ export default {
 
 <style scoped>
 	#contact {
+		background-color: red;
 		display: flex;
 		flex-direction: column;
 		gap: 2vh;
@@ -112,7 +113,6 @@ export default {
 
 	@media screen and (min-width: 1024px){
 		#contact {
-			height: 100%;
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(7, 1fr);

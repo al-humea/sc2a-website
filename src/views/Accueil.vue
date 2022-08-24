@@ -28,27 +28,9 @@
 </script>
 
 <style scoped>
-	#Map {
-		height: 60vh;
-	}
 	.content {
 		display: grid;
 		align-items: center;
 		gap: 1vh;
-	}
-	.paragraph{
-		text-align: justify;
-	}
-	#imgtext {
-		display: flex;
-		flex-direction: column;
-		max-width: 100%;
-		background-color: red;
-	}
-	#sc2aface {
-		object-fit: cover;
-		object-position: top center;
-		width: 100%;
-		height: 60vh;
 	}
 </style>

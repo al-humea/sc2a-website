@@ -1,9 +1,12 @@
 	/*Page right*/
-	.slideRight-leave-active,
+
 	.slideRight-enter-active,
-	.slideLeft-leave-active,
-	.slideLeft-enter-active {
-		transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	.slideLeft-enter-active,
+	.slideRight-leave-active,
+	.slideLeft-leave-active{
+		position: absolute;
+		top: 20vh;
+		transition: transform 0.5s ease-out, opacity 0.5s ease-in-out;
 	}
 	.slideRight-enter-from,
 	.slideLeft-leave-to {
@@ -19,7 +22,7 @@
 	/*FADE*/
 	.fade-leave-active,
 	.fade-enter-active {
-		transition: opacity 1s ease-in-out;
+		transition: opacity 0.5s ease-in-out;
 	}
 	.fade-enter-from,
 	.fade-leave-to {

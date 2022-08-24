@@ -54,8 +54,4 @@
 			display: none;
 		}
 	}
-	@media screen and (max-width : 720px){
-	}
-	@media screen and (max-width : 360px){
-	}
 </style>

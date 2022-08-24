@@ -33,6 +33,8 @@
 					this.current = this.items.length - 1;
 			},
 			contacter(name){
+				this.$store.commit("UPD_TRAN", "slideRight");
+				this.$store.commit("UPD_CURPAGE", 4);
 				this.$store.dispatch("updateRequest",{
 					obj:"[" + name +"] Détail de la demande",
 					status: this.statut
@@ -75,6 +77,7 @@
 
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position: center;
 		color: white;
 	}
 	/*navigation slide*/

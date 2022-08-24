@@ -27,6 +27,8 @@
 		width: 100vw;
 		min-height: 50px;
 		height: 5vh;
+		position: absolute;
+		bottom: -5.3vh;
 	}
 
 	nav {

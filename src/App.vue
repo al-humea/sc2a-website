@@ -14,7 +14,7 @@ export default {
 <template>
 	<NavBar/>
 	<router-view v-slot="content">
-		<Transition :name="this.$store.state.transition" mode="out-in">
+		<Transition :name="this.$store.state.transition">
 			<component :is="content.Component"></component>
 		</Transition>
 	</router-view>
@@ -44,18 +44,13 @@ export default {
 		min-height: 100vh;
 		width: 100vw;
 
-		display:flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-
 		font-family: Montserrat, Arial, sans-serif;
 		font-size: large;
 	}
 
 	.content {
-		width: 60%;
-		margin: 5vh 0%;
+		width: 60vw;
+		min-height: 60vh;
 	}
 	@media screen and (max-width: 1024px){
 		.content {
