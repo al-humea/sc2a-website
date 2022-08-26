@@ -1,6 +1,22 @@
 <script>
 	export default {
 		name: "NavLink",
+		data (){
+			return ({
+				anim : true
+			})
+		},
+		watch : {
+			"$route.name" : {
+				handler (){
+					if (this.$route.name == this.text)
+						this.anim= false;
+					else
+						this.anim = true;
+				},
+				deep:true
+			}
+		},
 		props:{
 			text: String,
 			path: String,
@@ -19,10 +35,11 @@
 </script>
 
 <template>
-	<router-link @click="updateTransition()" class="navLink" :to="path">{{text}}</router-link>
+	<router-link @click="updateTransition()" :class="{navLink : true, anim : !anim}" :to="path">{{text}}</router-link>
 </template>
 
 <style scoped>
+	
 	.navLink{
 		color : white;
 		width: fit-content;
@@ -50,5 +67,16 @@
 	.navLink:hover::after{
 		width: 100%;
 		left: 0%;
+	}
+	.anim::after {
+		position: absolute;
+		top: 100%;
+		left: 0%;
+		content:"";
+		background-color: #F4B907;
+		border-radius: 3px;
+		width: 100%;
+		height: 4px;
+		min-height: 0.5vh;
 	}
 </style>

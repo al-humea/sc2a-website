@@ -1,12 +1,14 @@
 <script>
 import Carousel from "../components/Carousel.vue"
 import offres from "../store/professionnel.json"
+import FooterBar from "@/components/FooterBar.vue";
 
 export default {
 	name : "Particulier",
 	components : {
-		Carousel
-	},
+    Carousel,
+    FooterBar
+},
 	data () {
 		return {
 			offres : offres
@@ -18,5 +20,6 @@ export default {
 <template>
 	<div>
 		<Carousel statut="Professionnel" :items="offres"/>
+		<FooterBar/>
 	</div>
 </template>

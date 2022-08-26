@@ -26,8 +26,6 @@
 
 #burgerButton {
 	margin: 5vh 0vw 0vh 5vw;
-
-	
 	grid-column: 1;
 	grid-row: 1;
 	height: 5vh;

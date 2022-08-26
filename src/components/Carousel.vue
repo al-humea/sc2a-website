@@ -13,7 +13,7 @@
 		},
 		data() {
 			return ({
-				current: 2,
+				current: 0,
 				showText: false
 			})
 		},
@@ -96,7 +96,7 @@
 		backdrop-filter: blur(10px);
 		border-radius: 25px;
 		height: 20px;
-		max-width: 10vw;
+		max-width: 7vw;
 		overflow:hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
@@ -112,7 +112,7 @@
 	/* CONTENU SLIDE*/
 	#slideContent{/* Texte slide*/
 		height: 60%;
-		width: 60%;
+		width: 90%;
 		border-radius: 25px;
 		box-sizing: border-box;
 		display: flex;
@@ -154,5 +154,10 @@
 	}
 	.slide-buttons:hover {
 		filter: invert(76%) sepia(54%) saturate(1240%) hue-rotate(353deg) brightness(96%) contrast(100%) opacity(100%);
+	}
+	@media screen and (max-width: 1024px) {
+		.slide-buttons {
+			display: none;
+		}
 	}
 </style>

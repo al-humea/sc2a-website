@@ -6,7 +6,7 @@
 	.slideLeft-leave-active{
 		position: absolute;
 		top: 20vh;
-		transition: transform 0.5s ease-out, opacity 0.5s ease-in-out;
+		transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	}
 	.slideRight-enter-from,
 	.slideLeft-leave-to {

@@ -18,7 +18,6 @@ export default {
 			<component :is="content.Component"></component>
 		</Transition>
 	</router-view>
-	<FooterBar/>
 </template>
 
 <style>
@@ -35,6 +34,11 @@ export default {
 		src: local("Montserrat"),
 			url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
 	}
+	@font-face {
+		font-family: "LuMarcLL";
+		src: local("LumarcLL"),
+			url("./assets/fonts/LuMarcLL-Normal.ttf") format("truetype");
+	}
 	nav , footer , h2{
 		font-family: "Blaimim";
 	}
@@ -49,11 +53,13 @@ export default {
 	}
 
 	.content {
+		margin: 7.5vh 20vw;
 		width: 60vw;
 		min-height: 60vh;
 	}
 	@media screen and (max-width: 1024px){
 		.content {
+			margin: 5vh auto 7vh auto;
 			width: 80%;
 		}
 	}
