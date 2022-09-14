@@ -13,12 +13,12 @@
 </script>
 
 <template>
-	<div @click="toggle" id="burgerButton" >
-		<div id="line1" :class="{straightUp:!status, downward:status }"></div>
+	<div @click="toggle" id="burgerButton">
+		<div id="line1" :class="{straightUp:!status, downward:status, shaded: !status}"></div>
 		<Transition name="middlebar">
-			<div id="line2" v-if="!status"></div>
+			<div id="line2" v-if="!status" :class="{shaded:!status}"></div>
 		</Transition>
-		<div id="line3" :class="{straightBot:!status, upward:status }"></div>
+		<div id="line3" :class="{straightBot:!status, upward:status, shaded: !status}"></div>
 	</div>
 </template>
 
@@ -44,7 +44,9 @@
 	background-color: #fff;
 	border-radius: 5px;
 }
-
+.shaded {
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
 #burgerButton:hover {
 	cursor: pointer;
 }

@@ -11,7 +11,7 @@ export default createStore({
 		obj : "",
 		content : "",
 		transition : "",
-		curPageNum : 1
+		curPageNum : 0
 	},
 	mutations: {
 		UPD_OBJ(state, payload){	state.obj = String(payload);},

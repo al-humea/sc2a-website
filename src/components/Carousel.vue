@@ -47,8 +47,9 @@
 <template>
 	<div id="Carousel" :style="{ backgroundImage: 'url(' + items[current].image.path + ')' }">
 		<div id="menu">
-			<div v-for="item in items" :class='{menuButton : true, glass : !(item.num - 1 == this.current)}' @click="toSlide(item.num)">
-				{{item.heading}}
+			<div v-for="item in items" @click="toSlide(item.num)" :class='{menuButton : true, glass : !(item.num - 1 == this.current), current : (item.num - 1 == this.current)}'>
+				<div id="header">{{item.heading}}</div>
+				<img :src="item.icon" class="icon" />
 			</div>
 		</div>
 
@@ -72,18 +73,25 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 100vw;
-		height: 80vh;
+		width: 100%;
+		min-height: 80vh;
 
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
 		color: white;
 	}
+	.icon {display: none;}
 	/*navigation slide*/
+	#header{
+		overflow:hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
 	#menu {
 		position: absolute;
 		top: 4vh;
+		max-width: 100%;
 		display: flex;
 		justify-content: space-between;
 		gap: 1vw;
@@ -96,13 +104,11 @@
 		backdrop-filter: blur(10px);
 		border-radius: 25px;
 		height: 20px;
-		max-width: 7vw;
-		overflow:hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
+		max-width: 5vw;
+		min-width: 10px;
 		transition: max-width 0.5s ease;
 	}
-	.menuButton:hover{
+	.menuButton:hover, .current{
 		max-width: 20vw;
 	}
 	.glass {
@@ -111,8 +117,9 @@
 
 	/* CONTENU SLIDE*/
 	#slideContent{/* Texte slide*/
+		margin: 100px 0 50px 0;
 		height: 60%;
-		width: 90%;
+		max-width: 90%;
 		border-radius: 25px;
 		box-sizing: border-box;
 		display: flex;
@@ -139,7 +146,7 @@
 		font-size: x-large;
 	}
 	h2 { /**/
-		font-size:54px;
+		font-size:xx-large;
 	}
 	/*Fleches style*/
 	#left-slide-button {transform: scaleX(-1);}
@@ -156,6 +163,14 @@
 		filter: invert(76%) sepia(54%) saturate(1240%) hue-rotate(353deg) brightness(96%) contrast(100%) opacity(100%);
 	}
 	@media screen and (max-width: 1024px) {
+		#header {display: none;}
+		.icon {
+			display: block;
+			width: 20px;
+			margin-left: 50%;
+			transform: translateX(-50%);
+			filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(2%) hue-rotate(21deg) brightness(106%) contrast(100%);
+		}
 		.slide-buttons {
 			display: none;
 		}

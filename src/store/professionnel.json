@@ -6,7 +6,8 @@
 		"path": "/professionnel/locaux.jpg",
 		"alt": "meeting in the office",
 		"credit":"Photo by Jason Goodman on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/habitation.svg"
 },
 {
 	"num": 2,
@@ -16,7 +17,8 @@
 		"path": "/professionnel/flotte.jpg",
 		"alt": "vehicle fleet",
 		"credit":"Photo by Markus Winkler on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/auto.svg"
 },
 {
 	"num": 3,
@@ -26,7 +28,8 @@
 		"path": "/professionnel/collsante.jpg",
 		"alt":"peoples holding hands",
 		"credit":"Photo by krakenimages on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/sante.svg"
 },
 {
 	"num": 4,
@@ -36,7 +39,8 @@
 		"path": "/professionnel/juridique.jpg",
 		"alt":"lady justice",
 		"credit": "Photo by Tingey Injury Law Firm on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/juridique.svg"
 },
 {
 	"num": 5,
@@ -46,7 +50,8 @@
 		"path": "/professionnel/prevoyance.jpg",
 		"alt":"happy construction worker",
 		"credit":"Photo by mina rad on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/prevoyance.svg"
 },
 {
 	"num": 6,
@@ -56,7 +61,8 @@
 		"path": "/professionnel/retraite.jpg",
 		"alt":"old peoples playing chess",
 		"credit":"Photo by Vlad Sargu on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/retraite.svg"
 },
 {
 	"num": 7,
@@ -66,7 +72,8 @@
 		"path": "/professionnel/credit.jpg",
 		"alt":"building in construction",
 		"credit":"Photo by Ryunosuke Kikuno on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/credit.svg"
 },
 {
 	"num": 8,
@@ -76,5 +83,6 @@
 		"path": "/professionnel/rc.jpg",
 		"alt":"handshake",
 		"credit":"Photo by Austin Kehmeier on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/crash.svg"
 }]

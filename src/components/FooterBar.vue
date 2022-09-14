@@ -54,6 +54,13 @@
 		}
 	}
 	@media screen and (max-width: 1024px){
+		nav {
+			width: 90%;
+		}
+		footer {
+			position: sticky;
+			bottom: 0;
+		}
 		a {
 			width: min-content;
 		}

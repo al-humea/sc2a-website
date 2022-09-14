@@ -31,11 +31,13 @@
 	}
 
 	#pc-nav {
+		
 		font-size: larger;
 		z-index: 4;
+
 		position: absolute;
-		margin: 15vh auto 0 auto;
-		width: 50vw;
+		bottom: 35px;
+		width: 50%;
 		left:25%;
 
 		display: flex;

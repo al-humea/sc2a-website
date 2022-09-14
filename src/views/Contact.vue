@@ -2,6 +2,7 @@
 import FooterBar from '@/components/FooterBar.vue';
 export default {
     name: "Contact",
+    components: { FooterBar },
     data() {
         return ({
             captcha: true
@@ -40,8 +41,7 @@ export default {
             get() { return this.$store.state.content; },
             set(value) { this.$store.commit("UPD_CONT", value); }
         }
-    },
-    components: { FooterBar }
+    }
 }
 </script>
 
@@ -88,10 +88,13 @@ export default {
 </template>
 
 <style scoped>
+	.content {
+		min-height: 62vh;
+	}
 	#contact {
-		/* From https://css.glass */
 		background: rgba(255, 255, 255, 0.20);
 		gap: 2vh;
+		margin: 2vh auto;
 		border-radius: 16px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(9px);

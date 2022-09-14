@@ -2,7 +2,10 @@
 import FooterBar from '@/components/FooterBar.vue';
 	export default {
     name: "MentionsLegales",
-    components: { FooterBar }
+    components: { FooterBar },
+	mounted (){
+		this.$store.commit("UPD_CURPAGE", 0);
+	}
 }
 </script>
 

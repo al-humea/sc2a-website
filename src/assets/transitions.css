@@ -5,7 +5,7 @@
 	.slideRight-leave-active,
 	.slideLeft-leave-active{
 		position: absolute;
-		top: 20vh;
+		top: max(20vh, 240px);
 		transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	}
 	.slideRight-enter-from,

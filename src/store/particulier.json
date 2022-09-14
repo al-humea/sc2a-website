@@ -6,7 +6,8 @@
 		"path": "/particulier/famille.jpg",
 		"alt": "parents avec leur enfant",
 		"credit": "Photo by Kelly Sikkema on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/habitation.svg"
 },
 {
 	"num": 2,
@@ -16,7 +17,8 @@
 		"path": "/particulier/auto.jpg",
 		"alt": "woman driving car",
 		"credit": "Photo by Jenny Ueberberg on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/auto.svg"
 },
 {
 	"num": 3,
@@ -26,7 +28,8 @@
 		"path": "/particulier/sante.jpg",
 		"alt":"man getting bandaid",
 		"credit": "Photo by CDC on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/sante.svg"
 },
 {
 	"num": 4,
@@ -36,7 +39,8 @@
 		"path": "/particulier/juridique.jpg",
 		"alt":"lady justice",
 		"credit": "Photo by Tingey Injury Law Firm on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/juridique.svg"
 },
 {
 	"num": 5,
@@ -46,7 +50,8 @@
 		"path": "/particulier/prevoyance.jpg",
 		"alt":"peoples holding hands",
 		"credit":"Photo by Priscilla Du Preez on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/prevoyance.svg"
 },
 {
 	"num": 6,
@@ -56,7 +61,8 @@
 		"path": "/particulier/retraite.jpg",
 		"alt":"grandpa holding child",
 		"credit":"Photo by Johnny Cohen on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/retraite.svg"
 },
 {
 	"num": 7,
@@ -66,5 +72,6 @@
 		"path": "/particulier/credit.jpg",
 		"alt":"man toy sitting on money",
 		"credit":"Photo by Mathieu Stern on Unsplash"
-	}
+	},
+	"icon" : "/carousel_icons/credit.svg"
 }]

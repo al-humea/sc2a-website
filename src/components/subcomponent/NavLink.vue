@@ -9,8 +9,10 @@
 		watch : {
 			"$route.name" : {
 				handler (){
-					if (this.$route.name == this.text)
+					if (this.$route.name == this.text){
 						this.anim= false;
+						this.$store.commit("UPD_CURPAGE", this.slideNum);
+					}
 					else
 						this.anim = true;
 				},
@@ -24,11 +26,12 @@
 		},
 		methods:{
 			updateTransition(){
-				if (this.slideNum < this.$store.state.curPageNum)
+				if (this.$store.state.curPageNum == 0)
+					this.$store.commit("UPD_TRAN", "fade");
+				else if (this.slideNum < this.$store.state.curPageNum)
 					this.$store.commit("UPD_TRAN", "slideLeft");
-				if (this.slideNum > this.$store.state.curPageNum)
+				else if (this.slideNum > this.$store.state.curPageNum)
 					this.$store.commit("UPD_TRAN", "slideRight");
-				this.$store.commit("UPD_CURPAGE", this.slideNum);
 			}
 		}
 	}
