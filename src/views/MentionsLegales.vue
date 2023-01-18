@@ -58,31 +58,32 @@ import FooterBar from '@/components/FooterBar.vue';
 			<div id="Editeur">
 				<h2>Editeur</h2>
 				<table>
-				<tr><td colspan="2">SARL SC2A</td></tr>
-				<tr>
-					<td colspan="2">63 AV JEAN LOLIVE 93500 PANTIN</td>
-				</tr>
-				<tr></tr>
-				<tr>
-					<td>Directeur de la publication :</td>
-					<td>Christophe L’HUMEAU / Guillaume L’HUMEAU</td>
-				</tr>
-				<tr>
-					<td>Graphisme, développement et réalisation :</td>
-					<td>Alexandre L’HUMEAU</td>
-				</tr>
+					<tr><td colspan="2" style="text-decoration:underline">SARL SC2A, 63 AV JEAN LOLIVE 93500 PANTIN</td></tr>
+					<tr>
+						<td>Directeur de la publication :</td>
+						<td>Christophe L’HUMEAU / Guillaume L’HUMEAU</td>
+					</tr>
+					<tr>
+						<td>Graphisme, développement et réalisation :</td>
+						<td>Alexandre L’HUMEAU</td>
+					</tr>
 				</table>
 			</div>
 			<div id="Hebergeur">
 				<h2>Hebergeur (Mettre à jour)</h2>
-				<p>ORANGE<br>Société anonyme au capital de 10 640 226 396 euros, RCS Nanterre 380 129 866<br>
-				Siège social</p>
-				<ul>
-					<li>111, quai du Président Roosevelt, 92130 ISSY-LES-MOULINEAUX</li>
-					<li>et domiciliée pour les besoins des présentes,1 avenue Nelson Mandela</li>
-					<li>, 94745 ARCUEIL</li>
-				</ul>
-				<p>Télephone : +33 1 44 44 22 22</p>
+				<table>
+					<tr><td colspan="2">ORANGE<br>Société anonyme au capital de 10 640 226 396 euros, RCS Nanterre 380 129 866</td></tr>
+					<tr>
+						<td>Siège social</td>
+						<td>
+							<ul>
+								<li>111, quai du Président Roosevelt, 92130 ISSY-LES-MOULINEAUX</li>
+								<li>et domiciliée pour les besoins des présentes,1 avenue Nelson Mandela</li>
+								<li>, 94745 ARCUEIL</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
 			</div>
 			<div id="Conditions">
 				<h2>Conditions Générales</h2>
@@ -126,6 +127,12 @@ import FooterBar from '@/components/FooterBar.vue';
 </template>
 
 <style scoped>
+	.content {
+		margin: 8vh auto;
+		color: #555;
+		font-size: 1.2em;
+		line-height: 1.6em;
+	}
 	div + div{
 		margin-top: 2vh;
 	}
@@ -138,9 +145,62 @@ import FooterBar from '@/components/FooterBar.vue';
 		color: black;
 		font-family: Helvetica, Arial, sans-serif;
 	}
+	td, th {
+		padding: .5em;
+		border: 1px solid #ddd;
+	}	
 	/*
 	** N'OUBLIE SURTOUT PAS
 	** LE LIEN DU SITE EN ROUGE
 	*/
 	b {color:red}
+</style>
+
+
+<style scoped>
+/*.content {
+
+    width: 80%;
+
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+}
+
+td, th {
+    padding: .5em;
+    border: 1px solid #ddd;
+}
+
+h2 {
+    margin-top: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    letter-spacing: 2px;
+}
+
+#Contact {
+    text-align: center;
+}
+
+#Contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 2em 0;
+}
+
+#Contact li {
+    padding: .5em 0;
+}
+
+#me-router-link {
+    color: #273188;
+    text-decoration: none;
+}
+*/
 </style>

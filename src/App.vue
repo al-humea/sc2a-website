@@ -66,7 +66,3 @@ export default {
 		}
 	}
 </style>
-
-
-
-FICHIER CSS AVEC LES TRANSITIONS

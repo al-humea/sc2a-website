@@ -1,33 +1,28 @@
 <template>
 	<div>
-	<div class="content">
-		<div class="page" id="first">
-			<h3>SC2A</h3>
-			<p>
-				Créée en 1999 la société de courtage en assurance SC2A a pour objectif de rechercher auprès de ses
-				différents partenaires les offres d'assurance correspondant le mieux à vos attentes, en termes de prix bien sûr,
-				mais également en termes de garanties. (produits financiers ou assurances de dommages).
-			</p>
+		<div class="content">
+			<div class="page" id="first">
+				<h2>SC2A, votre courtier d'assurance</h2>
+				<p>
+					SC2A est votre courtier d'assurance en ligne, créée en 1999, notre société a pour objectif de vous offrir les meilleures offres d'assurance en fonction de vos besoins et de votre budget. Nous proposons des solutions d'assurance pour les particuliers, les professionnels et les entreprises.
+				</p>
+			</div>
+			<div class="page" id="second">
+				<h3>Une équipe de professionnels à votre écoute</h3>
+				<p>Notre équipe de professionnels est à votre disposition pour vous conseiller et vous aider à trouver la meilleure assurance pour vous. Nous mettons tout en œuvre pour répondre à vos besoins et vous proposer des solutions adaptées à votre situation.</p>
+			</div>
+			<div class="page" id="third">
+				<h3>Des garanties sur mesure</h3>
+				<p>
+					Nous avons 30 ans d'expérience dans le domaine de l'assurance, et nous mettons cette expérience à votre disposition pour vous proposer des garanties sur mesure. Nous vous accompagnons tout au long de votre contrat d'assurance, depuis la souscription jusqu'à la gestion des sinistres.
+				</p>
+			</div>
+			<div class="page" id="last">
+				<h3>Des tarifs compétitifs</h3>
+				<p>En tant que courtier d'assurance indépendant, nous avons accès à un large panel d'offres d'assurance. Nous négocions pour vous les meilleurs tarifs pour assurer vous, votre famille, vos biens et vos outils de travail.</p>
+			</div>
 		</div>
-		<div class="page" id="second">
-			<h3>Proximité et écoute sont nos maîtres mots.</h3>
-			<p>Nos collaborateurs chercheront la solution la mieux adaptée à vos besoins.
-				Nous mettrons tout en œuvre afin de réaliser vos projets.</p>
-		</div>
-		<div class="page" id="third">
-			<h3>Chez SC2A, nous avons le soucis du client.</h3>
-			<p>
-				Fiers de nos années d'expériences et de nos compétences nous vous assurerons des 
-				solutions individuelles adaptées, des conseils tant à la soucription des contrats qu'à la gestion des sinistres pour que l'on puisse avoir un 
-				partenariat durable.
-			</p>
-		</div>
-		<div class="page" id="last">
-			<p>En tant que courtier d'assurances indépendant et avec plus de 30 années d'expérience, SC2A sera à vos côtés qu'il s'agisse de vous assurer 
-				personnellement, d'assurer votre famille, d'assurer vos biens, ou vos outils de travail.</p>
-		</div>
-	</div>
-	<FooterBar/>
+		<FooterBar/>
 	</div>
 </template>
 
@@ -43,16 +38,16 @@
 		window.removeEventListener('scroll', this.handleScroll);
 	},
 	methods: {
-		handleScroll (event) {
-			
+			handleScroll (event) {
+				
+			}
 		}
 	}
-}
 </script>
 
 <style scoped>
 	.content {
-		margin: 10vh auto;
+		margin:auto;
 		display: flex;
 		flex-direction: column;
 		gap: 10vh;
@@ -62,12 +57,29 @@
 		height: 80vh;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: #273188;
+	}
+	
+	#first {
+		background-color: #F5BA0C;
+	}
+	#second, #third, #last {
+		background-color: #273188;
+		color: white;
+	}
+	h2, h3 {
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	p {
+		font-size: 1.2em;
+		line-height: 1.5em;
+		margin: 1em 0;
 	}
 
-	.page:nth-child(even){
-		background-color: lightyellow;
-	}
-	.page:nth-child(odd){
-		background-color: lightgreen;
-	}
 </style>
