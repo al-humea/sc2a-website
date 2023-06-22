@@ -32,11 +32,12 @@
 	}
 	#identity {
 		min-width: fit-content;
+        width: 100%;
 		height: fit-content;
-		max-width: 40vw;
+		max-width: 50vw;
 		display: flex;
 		margin: 0 auto;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
 		margin-top: 1vh;
 	}

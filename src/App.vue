@@ -45,24 +45,23 @@ export default {
 		position: relative;
 		width: 100vw;
 		max-width: 100%;
-
 		font-family: Montserrat, Arial, sans-serif;
 		font-size: large;
 	}
 	body {
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */
-	}
+    }
 	::-webkit-scrollbar {
 		display: none;
 	}
 	.content {
 		margin: 0 auto;
-		width: 60%;
+		width: 70vw;
 	}
 	@media screen and (max-width: 1024px){
 		.content {
-			width: 80%;
+			width: 80vw;
 		}
 	}
 </style>

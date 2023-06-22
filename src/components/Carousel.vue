@@ -53,7 +53,7 @@
 			</div>
 		</div>
 
-		<img @click="decrementSlider" src="/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
+		<img @click="decrementSlider" src="carousel_icons/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
 
 		<div id="slideContent">
 			<h2>{{items[current].heading}}</h2>
@@ -62,8 +62,8 @@
 				<router-link @click="contacter(items[current].heading)" to="/Contact">Demander un devis</router-link>
 			</div>
 		</div>
-		
-		<img @click="incrementSlider" src="/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
+
+		<img @click="incrementSlider" src="carousel_icons/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
 	</div>
 </template>
 
@@ -132,7 +132,7 @@
 		backdrop-filter: blur(3px);
 	}
 	a:visited, a:focus, a:target, a{
-		color: #000;
+		color: #fff;
 		text-decoration: none;
 	}
 	#contacter {	/* Bouton slide*/

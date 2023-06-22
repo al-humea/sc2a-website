@@ -42,7 +42,7 @@
 </template>
 
 <style scoped>
-	
+
 	.navLink{
 		color : white;
 		width: fit-content;
