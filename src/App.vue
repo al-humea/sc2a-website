@@ -38,7 +38,7 @@ export default {
 			url("./assets/fonts/LuMarcLL-Normal.ttf") format("truetype");
 	}
 
-	nav , footer , h2{
+	nav , footer , h2, h1{
 		font-family: "Blaimim";
 	}
 	#app {

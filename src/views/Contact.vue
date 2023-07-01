@@ -89,7 +89,7 @@ export default {
 
 <style scoped>
 	.content {
-		min-height: 80vh;
+		min-height: 71vh;
 	}
 	#contact {
 		background: rgba(255, 255, 255, 0.20);
