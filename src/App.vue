@@ -42,6 +42,8 @@ export default {
 		font-family: "Blaimim";
 	}
 	#app {
+        padding:0;
+        margin:0;
 		position: relative;
 		width: 100vw;
 		max-width: 100%;
@@ -49,19 +51,12 @@ export default {
 		font-size: large;
 	}
 	body {
+        padding:0;
+        margin:0;
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */
     }
 	::-webkit-scrollbar {
 		display: none;
-	}
-	.content {
-		margin: 0 auto;
-		width: 70vw;
-	}
-	@media screen and (max-width: 1024px){
-		.content {
-			width: 80vw;
-		}
 	}
 </style>
