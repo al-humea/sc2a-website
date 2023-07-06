@@ -45,7 +45,7 @@
 </script>
 
 <template>
-	<div id="Carousel" :style="{ backgroundImage: 'url(' + items[current].image.path + ')' }">
+	<div id="Carousel" :style="{ backgroundImage: 'url(\'~@' + items[current].image.path + '\')' }">
 		<div id="menu">
 			<div v-for="item in items" @click="toSlide(item.num)" :class='{menuButton : true, glass : !(item.num - 1 == this.current), current : (item.num - 1 == this.current)}'>
 				<div id="header">{{item.heading}}</div>
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 
-		<img @click="decrementSlider" src="carousel_icons/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
+		<img @click="decrementSlider" src="@/assets/carousel_icons/chevron-right.svg" id="left-slide-button" class="slide-buttons"/>
 
 		<div id="slideContent">
 			<h2>{{items[current].heading}}</h2>
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 
-		<img @click="incrementSlider" src="carousel_icons/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
+		<img @click="incrementSlider" src="@/assets/carousel_icons/chevron-right.svg" id="right-slide-button" class="slide-buttons"/>
 	</div>
 </template>
 

@@ -2,7 +2,7 @@
 	<div  id="banner">
 		<div id="topleftcorner"></div>
 		<div id="identity">
-			<img id="sc2a_logo" src="banner/sc2a_logo.png" alt="logo">
+			<img id="sc2a_logo" src="@/assets/banner/sc2a_logo.png" alt="logo">
 			<div id="text">
 				<h1>ASSURANCES</h1>
 				<div id="textBar"></div>
@@ -70,7 +70,7 @@
 	}
 
 	#bottom {
-		content: url("../../../public/banner/Bottom.png");
+		content: url("@/assets//banner/Bottom.png");
 		height: 50%;
 		width: 100%;
 		position: absolute;
@@ -78,7 +78,7 @@
 		bottom: 0;
 	}
 	#rightcorner {
-		content: url("../../../public/banner/Corner-CBR.png");
+		content: url("@/assets//banner/Corner-CBR.png");
 		height: 50%;
 		position: absolute;
 		z-index: 1;
@@ -86,7 +86,7 @@
 		bottom: 0;
 	}
 	#topleftcorner {
-		content: url("../../../public/banner/Banner-CTL.svg");
+		content: url("@/assets/banner/Banner-CTL.svg");
 		max-height: 80%;
 		min-width: 175px;
 		max-width: 20vw;

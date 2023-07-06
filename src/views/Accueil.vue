@@ -35,23 +35,23 @@
                 <p>SC2A est votre courtier d'assurance en ligne, créée en 1999, notre société a pour objectif de vous offrir les meilleures offres d'assurance en fonction de vos besoins et de votre budget.</p>
                 <p>Nous proposons des solutions d'assurance pour les particuliers, les professionnels et les entreprises.</p>
                 <button id="nos_offres" @click="offres()">Nos offres</button>
-                <img src="../../public/carousel_icons/chevron-right.svg" alt="arrow pointing towards bottom" id="arrow" @click="offres()">
+                <img src="@/assets/carousel_icons/chevron-right.svg" alt="arrow pointing towards bottom" id="arrow" @click="offres()">
             </div>
-            <img style="left:0;-webkit-transform: scaleX(-1);transform: scaleX(-1);" src="../../public/accueil/stc.svg" alt="bottom left corner of first panel" id="cornerL" class="corners">
-            <img style="right:0;" src="../../public/accueil/stc.svg" alt="bottom right corner of first panel" id="cornerR" class="corners">
+            <img style="left:0;-webkit-transform: scaleX(-1);transform: scaleX(-1);" src="@/assets/accueil/stc.svg" alt="bottom left corner of first panel" id="cornerL" class="corners">
+            <img style="right:0;" src="@/assets/accueil/stc.svg" alt="bottom right corner of first panel" id="cornerR" class="corners">
         </section>
         <section class="slide" id="offres">
             <menu>
                 <router-link @click="updateTransition()" to="/Particulier" class="card">
-                    <img src="" alt="Smiling vector image" >
+                    <img src="@/assets/accueil/Handshake_Isometric.svg" alt="Smiling vector image" class="illustration">
                     <p>Particulier</p>
                 </router-link>
                 <router-link @click="updateTransition()" to="/Professionnel" class="card">
-                    <img src="" alt="Handshake vector image" >
+                    <img src="@/assets/accueil/Business.svg" alt="Handshake vector image" class="illustration">
                     <p>Professionnel</p>
                 </router-link>
                 <router-link @click="updateTransition()" to="/Professionnel" class="card">
-                    <img src="" alt="Building vector image" >
+                    <img src="@/assets/accueil/Team.svg" alt="Building vector image" class="illustration">
                     <p>Entreprise</p>
                 </router-link>
             </menu>
@@ -152,18 +152,24 @@
         align-items: center;
         justify-content: space-around;
     }
+    .illustration{
+        height:75%;
+    }
     .card{
         /* style */
+        font-weight: bold;
         color:#fff;
         border:#fff solid 2px;
         border-radius: 10px;
         text-decoration: none;
         text-align: center;
 
+
         width:20vmax;
         height:20vmax;
         /* arrangement */
-        display:grid;
+        display:flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         transition:scale 1s, box-shadow 1s;
@@ -199,6 +205,9 @@
         }
     }
     @media screen and (max-width: 1024px) {
+        .content {
+            font-size:large;
+        }
         menu{
             flex-direction: column;
             justify-content: space-around;

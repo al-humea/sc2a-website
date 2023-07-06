@@ -3,86 +3,86 @@
 	"text": "Il est important pour l'entreprise de protéger ses locaux. L'assurance dommages aux biens couvre vos bâtiments (Incendie, Vol, Bris de glaces, dommages aux machines, aux marchandises...) mais également votre responsabilité (contre les tiers, les voisins, le propriétaire...) ainsi que les dommages immatériels suite à sinistre (frais de déblais, perte d'exploitation/perte de chiffre d'affaires, perte de loyers...).",
 	"heading": "Locaux professionnel",
 	"image": {
-		"path": "/professionnel/locaux.jpg",
+		"path": "/assets/professionnel/locaux.jpg",
 		"alt": "meeting in the office",
 		"credit":"Photo by Jason Goodman on Unsplash"
 	},
-	"icon" : "/carousel_icons/habitation.svg"
+	"icon" : "/assets/carousel_icons/habitation.svg"
 },
 {
 	"num": 2,
 	"text": "Depuis 1958 la loi impose l'assurance pour tout véhicule terrestre à moteur. L'objectif de cette loi est de couvrir la responsabilité civile du conducteur pour les dommages causés aux tiers lors d'un accident. Bien sur et même si la loi ne l'oblige pas nous pouvons ajouter des garanties supplémentaires comme les dommages corporels du conducteur et les dommages subits par votre véhicule (incendie/Vol/Bris de Glace...). Pour les entreprises les contrats peuvent être des contrats individuels (1 seul véhicule assuré) ou des contrats Flotte Automobile (A partir de 5 véhicules). Les avantages pour l'entreprise de souscrire un contrat Flotte Automobile : Au niveau administratif il n'y a qu'un contrat à gérer, Au niveau financier la prime globale est inférieure, Au niveau des garanties chaque véhicule de la flotte peut être individualisé.",
 	"heading": "Auto ou flotte auto",
 	"image": {
-		"path": "/professionnel/flotte.jpg",
+		"path": "/assets/professionnel/flotte.jpg",
 		"alt": "vehicle fleet",
 		"credit":"Photo by Markus Winkler on Unsplash"
 	},
-	"icon" : "/carousel_icons/auto.svg"
+	"icon" : "/assets/carousel_icons/auto.svg"
 },
 {
 	"num": 3,
 	"text": "Depuis 2016 la loi impose à toute entreprise ayant au minimum 1 salarié de soucrire un contrat complémentaire Frais de Santé. Ce contrat collectif frais de santé a pour objectif de rembourser tout ou partie des dépenses de santé engagées par les salariés de l'entreprise et en complément des prestations versées par l'assurance maladie. Les formules que nous proposons en tant que courtier sont établies en concertation avec l'entreprise et fonction de la démographie des salariés à assurer (selon l'âge de chacun, selon que l'on assure que le salarié ou lui et son conjoint ou lui son conjoint et ses enfants). Toutes les hypothèses seront étudiées avec vous pour vous apporter la solution correspondant le mieux à vos attentes.",
 	"heading": "Collectif frais de santé",
 	"image": {
-		"path": "/professionnel/collsante.jpg",
+		"path": "/assets/professionnel/collsante.jpg",
 		"alt":"peoples holding hands",
 		"credit":"Photo by krakenimages on Unsplash"
 	},
-	"icon" : "/carousel_icons/sante.svg"
+	"icon" : "/assets/carousel_icons/sante.svg"
 },
 {
 	"num": 4,
 	"text": "Au quotidien les occasions de défendre vos droits sont multiples. Dans tous les domaines privé/professionnel vous pouvez avoir besoin de conseils juridiques, d'avis d'experts ou de la prise en charge des honoraires d'avocats/experts/huissiers pour la défense de vos intérêts.",
 	"heading": "Protection juridique",
 	"image": {
-		"path": "/professionnel/juridique.jpg",
+		"path": "/assets/professionnel/juridique.jpg",
 		"alt":"lady justice",
 		"credit": "Photo by Tingey Injury Law Firm on Unsplash"
 	},
-	"icon" : "/carousel_icons/juridique.svg"
+	"icon" : "/assets/carousel_icons/juridique.svg"
 },
 {
 	"num": 5,
 	"text": "Parce qu'il est important de se prémunir contre les risques de l'existance la garantie de prévoyance vous couvre en complément des régimes obligatoires. En contrat collectif ou individuel nos garanties couvrent les risques majeurs tels que l'invalidité, l'incapacité ou encore le décès.",
 	"heading": "Prévoyance individuelle ou collective",
 	"image": {
-		"path": "/professionnel/prevoyance.jpg",
+		"path": "/assets/professionnel/prevoyance.jpg",
 		"alt":"happy construction worker",
 		"credit":"Photo by mina rad on Unsplash"
 	},
-	"icon" : "/carousel_icons/prevoyance.svg"
+	"icon" : "/assets/carousel_icons/prevoyance.svg"
 },
 {
 	"num": 6,
 	"text": "Que ce soit l'article 83 (Surcomplémentaire retraite des salariés) ou en Madelin (Complément retraite et prévoyance des non salariés) il est primordial de préparer l'avenir. les objectifs sont nombreux notamment d'assurer un complément à votre retraite de base, de maintenir ses revenus en cas de perte d'activité ou d'invalidité, de verser un capital à ses proches en cas de décès.",
 	"heading": "Épargne retraite ",
 	"image": {
-		"path": "/professionnel/retraite.jpg",
+		"path": "/assets/professionnel/retraite.jpg",
 		"alt":"old peoples playing chess",
 		"credit":"Photo by Vlad Sargu on Unsplash"
 	},
-	"icon" : "/carousel_icons/retraite.svg"
+	"icon" : "/assets/carousel_icons/retraite.svg"
 },
 {
 	"num": 7,
 	"text": "Dès que vous empruntez de l'argent à organisme bancaire, il vous est impérativement demandé un contrat de garantie emprunteur. Si jusqu'en 2010 la banque se réservait la quasi totalité des assurances souscrites, la loi dite 'loi LAGARDE' a permis de choisir librement l'organisme de souscription d'une assurance emprunteur. Vous pouvez donc à la souscription d'un emprunt ou lors de chaque échéance anniversaire du contrat d'emprunt choisir librement votre assureur.",
 	"heading": "Assurance crédit",
 	"image": {
-		"path": "/professionnel/credit.jpg",
+		"path": "/assets/professionnel/credit.jpg",
 		"alt":"building in construction",
 		"credit":"Photo by Ryunosuke Kikuno on Unsplash"
 	},
-	"icon" : "/carousel_icons/credit.svg"
+	"icon" : "/assets/carousel_icons/credit.svg"
 },
 {
 	"num": 8,
 	"text": "L'entreprise doit impérativement se prémunir contre les dommages (matériel/corporel/immatériel) pouvant être causés aux tiers. Il est donc important de mettre en place une responsabilité civile avec l'entreprise tenant compte de ses besoins (RC Exploitation, RC après livraison ou travaux, RC Dirigeant, Défense Recours...).",
 	"heading": "Responsabilité civile",
 	"image": {
-		"path": "/professionnel/rc.jpg",
+		"path": "/assets/professionnel/rc.jpg",
 		"alt":"handshake",
 		"credit":"Photo by Austin Kehmeier on Unsplash"
 	},
-	"icon" : "/carousel_icons/crash.svg"
+	"icon" : "/assets/carousel_icons/crash.svg"
 }]
