@@ -1,26 +1,37 @@
 <script>
 	import FooterBar from '@/components/FooterBar.vue';
-    import LocomotiveScroll from 'locomotive-scroll';
 	export default {
         name: "HomeView",
         components: { FooterBar},
         data(){
             return {
                 selected:null,
-                scroll:null,
-                sections:null
+                seeing:null
             }
         },
         mounted(){
             this.$store.commit("UPD_TRAN", "fade");
             this.selected = document.querySelector("#offres");
-            this.scroll = new LocomotiveScroll();
-            this.sections = document.querySelectorAll("page");
-        },
-        methods:{
-            offres(){
-                this.scroll.scrollTo(this.selected);
-            }
+            this.offres = ()=>{
+                window.scrollTo({
+                    top:this.selected.offsetTop,
+                    behavior:"smooth"
+                });
+            };
+            this.observer = new IntersectionObserver((entries)=>{
+                entries.forEach((entry)=>{
+                    if (entry.intersectionRatio > 0){
+                        entry.target.classList.add("lineUp");
+                        entry.target.classList.remove("dynamic");
+                    }
+                })},
+                {
+                    rootMargin:"0px 0px 0px 0px"
+                }
+            );
+            document.querySelectorAll(".dynamic").forEach((slide)=>{
+                this.observer.observe(slide);
+            });
         }
     }
 
@@ -29,8 +40,8 @@
 <template>
 <div>
     <div class="content">
-        <section class="slide lineUp">
-            <div class="slideText">
+        <section class="slide">
+            <div class="slideText dynamic">
                 <h1 id="heading" ><u><strong>SC2A</strong></u>, votre partenaire de confiance en assurance</h1>
                 <p>SC2A est votre courtier d'assurance en ligne, créée en 1999, notre société a pour objectif de vous offrir les meilleures offres d'assurance en fonction de vos besoins et de votre budget.</p>
                 <p>Nous proposons des solutions d'assurance pour les particuliers, les professionnels et les entreprises.</p>
@@ -41,7 +52,7 @@
             <img style="right:0;" src="@/assets/accueil/stc.svg" alt="bottom right corner of first panel" id="cornerR" class="corners">
         </section>
         <section class="slide" id="offres">
-            <menu>
+            <menu class="dynamic">
                 <router-link @click="updateTransition()" to="/Particulier" class="card">
                     <img src="@/assets/accueil/Handshake_Isometric.svg" alt="Smiling vector image" class="illustration">
                     <p>Particulier</p>
@@ -57,13 +68,13 @@
             </menu>
         </section>
         <section class="slide">
-            <div class="slideText" >
+            <div class="slideText dynamic">
                 <h2>Une équipe de professionnels à votre écoute</h2>
                 <p>Notre équipe de professionnels est à votre disposition pour vous conseiller et vous aider à trouver la meilleure assurance pour vous. Nous mettons tout en œuvre pour répondre à vos besoins et vous proposer des solutions adaptées à votre situation.</p>
             </div>
         </section>
         <section class="slide">
-            <div class="slideText">
+            <div class="slideText dynamic">
                 <h2>Des garanties sur mesure</h2>
                 <p>
                     Nous avons 30 ans d'expérience dans le domaine de l'assurance, et nous mettons cette expérience à votre disposition pour vous proposer des garanties sur mesure. Nous vous accompagnons tout au long de votre contrat d'assurance, depuis la souscription jusqu'à la gestion des sinistres.
@@ -71,7 +82,7 @@
             </div>
         </section>
         <section class="slide">
-            <div class="slideText">
+            <div class="slideText dynamic">
                 <h2>Des tarifs compétitifs</h2>
                 <p>En tant que courtier d'assurance indépendant, nous avons accès à un large panel d'offres d'assurance. Nous négocions pour vous les meilleurs tarifs pour assurer vous, votre famille, vos biens et vos outils de travail.</p>
             </div>
@@ -177,6 +188,10 @@
     .card:hover{
         scale:1.05;
         box-shadow: 0 0 5px #fff;
+    }
+    .dynamic{
+        opacity:0;
+        transform: translateY(80%);
     }
     .lineUp {
         animation: 2s anim-lineUp ease-out forwards;
