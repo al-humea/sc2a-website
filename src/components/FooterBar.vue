@@ -23,6 +23,7 @@
 
 <style scoped>
 	footer {
+        z-index:3;
 		background-color: #273188;
 		width: 100vw;
 		min-height: 50px;
@@ -35,7 +36,7 @@
 		margin: auto;
 
 		display: flex;
-		justify-content: space-between;	
+		justify-content: space-between;
 		align-items: center;
 	}
 

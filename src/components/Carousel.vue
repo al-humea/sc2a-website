@@ -45,7 +45,7 @@
 </script>
 
 <template>
-	<div id="Carousel" :style="{ backgroundImage: 'url(\'~@' + items[current].image.path + '\')' }">
+	<div id="Carousel" :style="{ backgroundImage: 'url()' }">
 		<div id="menu">
 			<div v-for="item in items" @click="toSlide(item.num)" :class='{menuButton : true, glass : !(item.num - 1 == this.current), current : (item.num - 1 == this.current)}'>
 				<div id="header">{{item.heading}}</div>
