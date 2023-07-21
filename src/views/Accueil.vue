@@ -106,7 +106,7 @@
             </div>
         </section>
         <section>
-            <div class="slideText">
+            <div class="slideText" id="third">
                 <h2>Des garanties sur mesure</h2>
                 <p>
                     Nous avons 30 ans d'expérience dans le domaine de l'assurance, et nous mettons cette expérience à votre disposition pour vous proposer des garanties sur mesure. Nous vous accompagnons tout au long de votre contrat d'assurance, depuis la souscription jusqu'à la gestion des sinistres.
@@ -267,7 +267,7 @@
         max-height:100%;
     }
     #third {
-        background: url("../assets/accueil/garantie.jpg");
+        background: url("~@/assets/accueil/garantie.jpg");
     }
     @media screen and (max-width: 1024px) {
         .content {
