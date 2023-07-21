@@ -23,14 +23,14 @@
                 entries.forEach((entry)=>{
                     if (entry.intersectionRatio > this.intRatio){
                         entry.target.classList.remove("dynamic");
-                        if(entry.target.id == "first")
-                            entry.target.classList.add("lineUp");
                         if(entry.target.id == "second")
                             Array.from(entry.target.children).forEach((x, i)=>{
                                 setTimeout(()=>{
                                     x.classList.add("lineUp");
                                 },250 * i);
                             });
+                        else
+                            entry.target.classList.add("lineUp");
                     }
                 })},
                 {
@@ -76,13 +76,37 @@
             </menu>
         </section>
         <section class="slide">
-            <div class="slideText dynamic">
-                <h2>Des tarifs compétitifs</h2>
-                <p>En tant que courtier d'assurance indépendant, nous avons accès à un large panel d'offres d'assurance. Nous négocions pour vous les meilleurs tarifs pour assurer vous, votre famille, vos biens et vos outils de travail.</p>
+            <div class="slideText">
+                <h2>Des tarifs <span class="dynamic">compétitifs</span></h2>
+                <p>En tant que courtier d'assurance indépendant, nous avons accès à un large panel d'offres d'assurance. Nous négocions les meilleurs tarifs pour vous assurer, vous, votre famille, vos biens et vos outils de travail.<br>Avec des collaborateurs comme :</p>
+                <menu id="collaborateurs">
+                    <a href="https://www.axa.fr" target="_blank">
+                        <img src="@/assets/collaborateurs/axa.png" alt="Axa">
+                    </a>
+                    <a href="https://www.allianz.fr" target="_blank">
+                        <img src="@/assets/collaborateurs/allianz.png" alt="Allianz">
+                    </a>
+                    <a href="https://www.generali.fr" target="_blank">
+                        <img src="@/assets/collaborateurs/generali.png" alt="Generali">
+                    </a>
+                    <a href="https://www.swisslife.fr" target="_blank">
+                        <img src="@/assets/collaborateurs/swisslife.png" alt="Swisslife">
+                    </a>
+                    <a href="https://www.april.fr" target="_blank">
+                        <img src="@/assets/collaborateurs/april.png" alt="April">
+                    </a>
+                    <a href="https://www.sollyazar.com" target="_blank">
+                        <img src="@/assets/collaborateurs/sollyazar.png" alt="solly azar">
+                    </a>
+                    <a href="https://www.maxance.com" target="_blank">
+                        <img src="@/assets/collaborateurs/maxance.png" alt="Maxance">
+                    </a>
+                </menu>
+                <p>... Et bien d'autres !</p>
             </div>
         </section>
-        <section class="slide">
-            <div class="slideText dynamic">
+        <section>
+            <div class="slideText">
                 <h2>Des garanties sur mesure</h2>
                 <p>
                     Nous avons 30 ans d'expérience dans le domaine de l'assurance, et nous mettons cette expérience à votre disposition pour vous proposer des garanties sur mesure. Nous vous accompagnons tout au long de votre contrat d'assurance, depuis la souscription jusqu'à la gestion des sinistres.
@@ -130,6 +154,7 @@
         display : flex;
         flex-direction : column;
         align-items: center;
+        justify-content: center;
         padding-top:max(5vh, 20px);
     }
     button {
@@ -151,7 +176,6 @@
         animation: 2s anim-upDown ease-in-out infinite;
     }
     .corners{
-
         height:max(10vh,200px);
         position:absolute;
         z-index:-1;
@@ -161,7 +185,7 @@
         background-color: #273188;
         min-height:100vh;
     }
-    menu{
+    #second{
         /* style */
         background-color: #273188;
         width : 70%;
@@ -183,7 +207,6 @@
         border-radius: 10px;
         text-decoration: none;
         text-align: center;
-
 
         width:20vmax;
         height:20vmax;
@@ -228,15 +251,41 @@
             -webkit-transform: rotate(90deg) translateX(10px);
         }
     }
+    #collaborateurs{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:1vmax;
+
+        width: 100%;
+        min-height: 8vmax;
+        padding: 2vmax 0;
+    }
+    #collaborateurs img{
+        width: 8vmax;
+        max-height:100%;
+    }
+    #third {
+        background: url("../assets/accueil/garantie.jpg");
+    }
     @media screen and (max-width: 1024px) {
         .content {
             font-size:large;
         }
-        menu{
+        #second{
             flex-direction: column;
             justify-content: space-around;
             padding-bottom:20vmax;
             height:130vmax;
+        }
+        #collaborateurs{
+            justify-content: center;
+            gap:3vmax;
+        }
+        #collaborateurs img{
+            width: 15vmax;
+            max-height:100%;
         }
         .card{
             width:40vmax;
