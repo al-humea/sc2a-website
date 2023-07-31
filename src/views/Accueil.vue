@@ -27,7 +27,7 @@
                             Array.from(entry.target.children).forEach((x, i)=>{
                                 setTimeout(()=>{
                                     x.classList.add("lineUp");
-                                },250 * i);
+                                }, 250 * i);
                             });
                         else
                             entry.target.classList.add("lineUp");
@@ -265,9 +265,6 @@
     #collaborateurs img{
         width: 8vmax;
         max-height:100%;
-    }
-    #third {
-        background: url("~@/assets/accueil/garantie.jpg");
     }
     @media screen and (max-width: 1024px) {
         .content {
