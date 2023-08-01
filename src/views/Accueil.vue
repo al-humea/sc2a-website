@@ -37,6 +37,10 @@
                     rootMargin:"0px 0px 0px 0px"
                 }
             );
+            if (window.innerWidth < 1024){
+                document.querySelectorAll(".dynamic").forEach((x)=>
+                x.classList.remove("dynamic"));
+            }
             document.querySelectorAll(".dynamic").forEach((slide)=>{
                 this.observer.observe(slide);
             });
@@ -61,15 +65,15 @@
         </section>
         <section class="slide" id="offres">
             <menu class="dynamic" id="second">
-                <router-link to="/Particulier" class="card" style="opacity:0;">
+                <router-link to="/Particulier" class="card">
                     <img src="@/assets/accueil/Handshake_Isometric.svg" alt="Smiling vector image" class="illustration">
                     <p>Particulier</p>
                 </router-link>
-                <router-link to="/Professionnel" class="card" style="opacity:0;">
+                <router-link to="/Professionnel" class="card">
                     <img src="@/assets/accueil/Business.svg" alt="Handshake vector image" class="illustration">
                     <p>Professionnel</p>
                 </router-link>
-                <router-link to="/Professionnel" class="card" style="opacity:0;">
+                <router-link to="/Professionnel" class="card">
                     <img src="@/assets/accueil/Team.svg" alt="Building vector image" class="illustration">
                     <p>Entreprise</p>
                 </router-link>
@@ -77,9 +81,9 @@
         </section>
         <section class="slide">
             <div class="slideText">
-                <h2>Des tarifs <span class="dynamic">compétitifs</span></h2>
-                <p>En tant que courtier d'assurance indépendant, nous avons accès à un large panel d'offres d'assurance. Nous négocions les meilleurs tarifs pour vous assurer, vous, votre famille, vos biens et vos outils de travail.<br>Avec des collaborateurs comme :</p>
-                <menu id="collaborateurs">
+                <h2>Des tarifs <u>compétitifs</u></h2>
+                <p>En tant que courtier d'assurance indépendant, nous avons accès à un large panel d'offres d'assurance. Nous négocions les meilleurs tarifs pour vous assurer, vous ainsi que votre famille, vos biens et vos outils de travail, en solicitant plusieurs de nos collaborateurs.</p>
+                <menu id="collaborateurs" class="dynamic">
                     <a href="https://www.axa.fr" target="_blank">
                         <img src="@/assets/collaborateurs/axa.png" alt="Axa">
                     </a>
@@ -101,12 +105,12 @@
                     <a href="https://www.maxance.com" target="_blank">
                         <img src="@/assets/collaborateurs/maxance.png" alt="Maxance">
                     </a>
+                    <img src="@/assets/collaborateurs/dots.svg" alt="Et bien d'autres">
                 </menu>
-                <p>... Et bien d'autres !</p>
             </div>
         </section>
-        <section>
-            <div class="slideText" id="third">
+        <section class="slide" id="third">
+            <div class="slideText">
                 <h2>Des garanties sur mesure</h2>
                 <p>
                     Nous avons 30 ans d'expérience dans le domaine de l'assurance, et nous mettons cette expérience à votre disposition pour vous proposer des garanties sur mesure. Nous vous accompagnons tout au long de votre contrat d'assurance, depuis la souscription jusqu'à la gestion des sinistres.
@@ -114,7 +118,7 @@
             </div>
         </section>
         <section class="slide">
-            <div class="slideText dynamic">
+            <div class="slideText">
                 <h2>Une équipe de professionnels à votre écoute</h2>
                 <p>Notre équipe de professionnels est à votre disposition pour vous conseiller et vous aider à trouver la meilleure assurance pour vous. Nous mettons tout en œuvre pour répondre à vos besoins et vous proposer des solutions adaptées à votre situation.</p>
             </div>
@@ -266,6 +270,19 @@
         width: 8vmax;
         max-height:100%;
     }
+    #third {
+        background: url("../assets/accueil/garanties2.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    #third > .slideText{
+        height:max-content;
+        color:#f5ba08;
+        backdrop-filter: blur(3px);
+    }
+    .card {
+        opacity:0;
+    }
     @media screen and (max-width: 1024px) {
         .content {
             font-size:large;
@@ -287,6 +304,7 @@
         .card{
             width:40vmax;
             height:40vmax;
+            opacity:1;
         }
     }
 </style>
