@@ -15,7 +15,7 @@
             this.selected = document.querySelector("#offres");
             this.offres = ()=>{
                 window.scrollTo({
-                    top:this.selected.offsetTop,
+                    top:this.selected.offsetTop - Math.floor(window.innerHeight/8),
                     behavior:"smooth"
                 });
             };
@@ -52,7 +52,7 @@
 <template>
 <div>
     <div class="content">
-        <section class="slide">
+        <section class="slide" style="position:relative;">
             <div class="slideText dynamic" id="first">
                 <h1 id="heading" ><u><strong>SC2A</strong></u>, votre partenaire de confiance en assurance</h1>
                 <p>SC2A est votre courtier d'assurance en ligne, créée en 1999, notre société a pour objectif de vous offrir les meilleures offres d'assurance en fonction de vos besoins et de votre budget.</p>
@@ -60,8 +60,10 @@
                 <button id="nos_offres" @click="offres()">Nos offres</button>
                 <img src="@/assets/carousel_icons/chevron-right.svg" alt="arrow pointing towards bottom" id="arrow" @click="offres()">
             </div>
-            <img style="left:0;-webkit-transform: scaleX(-1);transform: scaleX(-1);" src="@/assets/accueil/stc.svg" alt="bottom left corner of first panel" id="cornerL" class="corners">
-            <img style="right:0;" src="@/assets/accueil/stc.svg" alt="bottom right corner of first panel" id="cornerR" class="corners">
+            <div id="corners">
+                <img style="-webkit-transform: scaleX(-1);transform: scaleX(-1);" src="@/assets/accueil/stc.svg" alt="bottom left corner of first panel" id="fcorner">
+                <img src="@/assets/accueil/stc.svg" alt="bottom right corner of first panel" id="scorner">
+            </div>
         </section>
         <section class="slide" id="offres">
             <menu class="dynamic" id="second">
@@ -85,27 +87,27 @@
                 <p>En tant que courtier d'assurance indépendant, nous avons accès à un large panel d'offres d'assurance. Nous négocions les meilleurs tarifs pour vous assurer, vous ainsi que votre famille, vos biens et vos outils de travail, en solicitant plusieurs de nos collaborateurs.</p>
                 <menu id="collaborateurs" class="dynamic">
                     <a href="https://www.axa.fr" target="_blank">
-                        <img src="@/assets/collaborateurs/axa.png" alt="Axa">
+                        <img src="@/assets/collaborateurs/axa.png" alt="Axa" title="Axa">
                     </a>
                     <a href="https://www.allianz.fr" target="_blank">
-                        <img src="@/assets/collaborateurs/allianz.png" alt="Allianz">
+                        <img src="@/assets/collaborateurs/allianz.png" alt="Allianz" title="Allianz">
                     </a>
                     <a href="https://www.generali.fr" target="_blank">
-                        <img src="@/assets/collaborateurs/generali.png" alt="Generali">
+                        <img src="@/assets/collaborateurs/generali.png" alt="Generali" title="Generali">
                     </a>
                     <a href="https://www.swisslife.fr" target="_blank">
-                        <img src="@/assets/collaborateurs/swisslife.png" alt="Swisslife">
+                        <img src="@/assets/collaborateurs/swisslife.png" alt="Swisslife" title="Swisslife">
                     </a>
                     <a href="https://www.april.fr" target="_blank">
-                        <img src="@/assets/collaborateurs/april.png" alt="April">
+                        <img src="@/assets/collaborateurs/april.png" alt="April" title="April">
                     </a>
                     <a href="https://www.sollyazar.com" target="_blank">
-                        <img src="@/assets/collaborateurs/sollyazar.png" alt="solly azar">
+                        <img src="@/assets/collaborateurs/sollyazar.png" alt="solly azar" title="Solly Azar">
                     </a>
                     <a href="https://www.maxance.com" target="_blank">
-                        <img src="@/assets/collaborateurs/maxance.png" alt="Maxance">
+                        <img src="@/assets/collaborateurs/maxance.png" alt="Maxance" title="Maxance">
                     </a>
-                    <img src="@/assets/collaborateurs/dots.svg" alt="Et bien d'autres">
+                    <img src="@/assets/collaborateurs/dots.svg" alt="..." title="Et bien d'autres">
                 </menu>
             </div>
         </section>
@@ -179,12 +181,24 @@
         height:max(5vh,100px);
         animation: 2s anim-upDown ease-in-out infinite;
     }
-    .corners{
-        height:max(10vh,200px);
+    #corners{
         position:absolute;
         z-index:-1;
         bottom: 0;
+        width:100%;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
     }
+    #corners img{
+        height:max(10vh,200px);
+    }
+    #fcorner{
+        grid-column: 1;
+    }
+    #scorner{
+        grid-column:2;
+    }
+
     #offres{
         background-color: #273188;
     }
@@ -287,8 +301,8 @@
         }
         #second{
             flex-direction: column;
-            justify-content: space-around;
-            padding-bottom:20vmax;
+            justify-content: space-between;
+            padding: 10vmax 0;
             height:130vmax;
         }
         #collaborateurs{

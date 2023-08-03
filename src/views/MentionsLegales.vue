@@ -89,27 +89,27 @@ import FooterBar from '@/components/FooterBar.vue';
 				<h2>Conditions Générales</h2>
 				<p>
 					L’objet des présentes Conditions Générales est de définir les conditions d’accès et d’utilisation du site internet de la société SC2A,
-					accessible aux adresses suivantes : <b>ADRESSE DU SITE</b>, ci-après également dénommé le « Site Internet ».L’accès et l’utilisation du Site
-					Internet impliquent que l’internaute, également appelé « l’Utilisateur », accepte tacitement, complètement, et sans réserve les présentes Conditions 
+					accessible aux adresses suivantes : <b><a href="www.sc2aassurances.com">www.sc2aassurances.com</a></b>, ci-après également dénommé le « Site Internet ».L’accès et l’utilisation du Site
+					Internet impliquent que l’internaute, également appelé « l’Utilisateur », accepte tacitement, complètement, et sans réserve les présentes Conditions
 					Générales dans leur dernière version mise en ligne.
 				</p>
 			</div>
 			<div id="Objectif">
 				<h2>Objectifs, nature de l’information et responsabilité</h2>
 				<p>
-					Le Site Internet a pour objectif de procurer une information aux Utilisateurs sur la nature de l’activité et 
-					des services proposés par la société SC2A.La société SC2A s’efforce de mettre à la disposition des internautes 
+					Le Site Internet a pour objectif de procurer une information aux Utilisateurs sur la nature de l’activité et
+					des services proposés par la société SC2A.La société SC2A s’efforce de mettre à la disposition des internautes
 					un Site Internet exempt de dysfonctionnements et comprenant une information actualisée et de qualité.
-					Pour autant, les informations publiées sur le Site Internet n’ont pas un caractère pré-contractuel, et la société 
-					SC2A ne fournit aucune garantie relative à la continuité de la mise en ligne du Site Internet ou à son bon fonctionnement, 
-					à l’exactitude et à l’exhaustivité de l’information diffusée, et à ce titre, décline toute responsabilité pour tous les 
-					dommages subis par les Utilisateurs ou les tiers, directs ou indirects, matériels ou immatériels, consécutifs ou en lien 
+					Pour autant, les informations publiées sur le Site Internet n’ont pas un caractère pré-contractuel, et la société
+					SC2A ne fournit aucune garantie relative à la continuité de la mise en ligne du Site Internet ou à son bon fonctionnement,
+					à l’exactitude et à l’exhaustivité de l’information diffusée, et à ce titre, décline toute responsabilité pour tous les
+					dommages subis par les Utilisateurs ou les tiers, directs ou indirects, matériels ou immatériels, consécutifs ou en lien
 					avec les informations publiées sur le Site Internet ou avec la navigation sur le Site Internet.
 				</p>
 			</div>
 			<div id="Recla">
 				<h2>Réclamation</h2>
-				
+
 				<p>Vos demandes sont à adresser à :</p>
 				<ul>
 					<li>SC2A,</li>
@@ -132,6 +132,7 @@ import FooterBar from '@/components/FooterBar.vue';
 		color: #555;
 		font-size: 1.2em;
 		line-height: 1.6em;
+        max-width:70%;
 	}
 	div + div{
 		margin-top: 2vh;
@@ -140,7 +141,6 @@ import FooterBar from '@/components/FooterBar.vue';
 		margin: 1% 0% 0% 0%;
 	}
 	ul { list-style: none; }
-	table { width: 70%;}
 	a:link, a:visited, a{
 		color: black;
 		font-family: Helvetica, Arial, sans-serif;
@@ -148,59 +148,15 @@ import FooterBar from '@/components/FooterBar.vue';
 	td, th {
 		padding: .5em;
 		border: 1px solid #ddd;
-	}	
+	}
 	/*
 	** N'OUBLIE SURTOUT PAS
 	** LE LIEN DU SITE EN ROUGE
 	*/
 	b {color:red}
-</style>
-
-
-<style scoped>
-/*.content {
-
-    width: 80%;
-
-
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2em 0;
-}
-
-td, th {
-    padding: .5em;
-    border: 1px solid #ddd;
-}
-
-h2 {
-    margin-top: 2em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.6em;
-    letter-spacing: 2px;
-}
-
-#Contact {
-    text-align: center;
-}
-
-#Contact ul {
-    list-style: none;
-    padding: 0;
-    margin: 2em 0;
-}
-
-#Contact li {
-    padding: .5em 0;
-}
-
-#me-router-link {
-    color: #273188;
-    text-decoration: none;
-}
-*/
+    @media screen and (max-width: 1024px) {
+        .content{
+            max-width:90%;
+        }
+    }
 </style>
