@@ -142,8 +142,8 @@
         align-items: center;
     }
     .slide {
-        min-height : 70vh;
         width : 100%;
+        min-height:70vh;
         /* arrangement */
         position:relative;
         display : flex;
@@ -187,7 +187,6 @@
     }
     #offres{
         background-color: #273188;
-        min-height:100vh;
     }
     #second{
         /* style */
@@ -198,7 +197,7 @@
         display:flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .illustration{
         height:75%;
@@ -258,7 +257,7 @@
     #collaborateurs{
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
         gap:1vmax;
 
@@ -271,14 +270,13 @@
         max-height:100%;
     }
     #third {
-        background: url("../assets/accueil/garanties2.jpg");
+        background: url("../assets/accueil/garanties.jpg");
         background-position: center;
         background-size: cover;
     }
     #third > .slideText{
         height:max-content;
-        color:#f5ba08;
-        backdrop-filter: blur(3px);
+        color:#fff;
     }
     .card {
         opacity:0;
@@ -296,9 +294,10 @@
         #collaborateurs{
             justify-content: center;
             gap:3vmax;
+            flex-wrap: wrap;
         }
         #collaborateurs img{
-            width: 15vmax;
+            max-width: 15vmax;
             max-height:100%;
         }
         .card{
